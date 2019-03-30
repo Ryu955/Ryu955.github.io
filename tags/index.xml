@@ -6,9 +6,28 @@
     <description>Recent content in Tags on Ryu955</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
+    <lastBuildDate>Sun, 31 Mar 2019 00:50:55 +0900</lastBuildDate>
     
 	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Huga</title>
+      <link>/tags/huga/</link>
+      <pubDate>Sun, 31 Mar 2019 00:50:55 +0900</pubDate>
+      
+      <guid>/tags/huga/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Piyo</title>
+      <link>/tags/piyo/</link>
+      <pubDate>Sun, 31 Mar 2019 00:50:55 +0900</pubDate>
+      
+      <guid>/tags/piyo/</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>
