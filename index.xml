@@ -6,9 +6,28 @@
     <description>Recent content on Ryu955</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
+    <lastBuildDate>Sat, 30 Mar 2019 22:51:58 +0900</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Hugahuga</title>
+      <link>/posts/hugahuga/</link>
+      <pubDate>Sat, 30 Mar 2019 22:51:58 +0900</pubDate>
+      
+      <guid>/posts/hugahuga/</guid>
+      <description> huga </description>
+    </item>
+    
+    <item>
+      <title>Huga</title>
+      <link>/posts/huga/</link>
+      <pubDate>Sat, 30 Mar 2019 18:47:41 +0900</pubDate>
+      
+      <guid>/posts/huga/</guid>
+      <description>test</description>
+    </item>
     
   </channel>
 </rss>
