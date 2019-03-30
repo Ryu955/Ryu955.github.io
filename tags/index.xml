@@ -2,32 +2,13 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Ryu955</title>
-    <link>/tags/</link>
+    <link>https://ryu955.github.io/tags/</link>
     <description>Recent content in Tags on Ryu955</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Sun, 31 Mar 2019 00:50:55 +0900</lastBuildDate>
     
-	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://ryu955.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Huga</title>
-      <link>/tags/huga/</link>
-      <pubDate>Sun, 31 Mar 2019 00:50:55 +0900</pubDate>
-      
-      <guid>/tags/huga/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Piyo</title>
-      <link>/tags/piyo/</link>
-      <pubDate>Sun, 31 Mar 2019 00:50:55 +0900</pubDate>
-      
-      <guid>/tags/piyo/</guid>
-      <description></description>
-    </item>
     
   </channel>
 </rss>

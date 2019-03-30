@@ -3,48 +3,21 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/posts/20190331/</loc>
-    <lastmod>2019-03-31T00:50:55+09:00</lastmod>
+    <loc>https://ryu955.github.io/about/</loc>
   </url>
   
   <url>
-    <loc>/categories/</loc>
+    <loc>https://ryu955.github.io/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/categories/hoge/</loc>
-    <lastmod>2019-03-31T00:50:55+09:00</lastmod>
+    <loc>https://ryu955.github.io/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/huga/</loc>
-    <lastmod>2019-03-31T00:50:55+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/piyo/</loc>
-    <lastmod>2019-03-31T00:50:55+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/posts/</loc>
-    <lastmod>2019-03-31T00:50:55+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/</loc>
-    <lastmod>2019-03-31T00:50:55+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/</loc>
-    <lastmod>2019-03-31T00:50:55+09:00</lastmod>
+    <loc>https://ryu955.github.io/tags/</loc>
     <priority>0</priority>
   </url>
   

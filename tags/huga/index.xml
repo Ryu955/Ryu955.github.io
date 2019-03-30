@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Huga on Ryu955</title>
-    <link>/tags/huga/</link>
+    <link>https://ryu955.github.io/tags/huga/</link>
     <description>Recent content in Huga on Ryu955</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
     <lastBuildDate>Sun, 31 Mar 2019 00:50:55 +0900</lastBuildDate>
     
-	<atom:link href="/tags/huga/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://ryu955.github.io/tags/huga/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>20190331</title>
-      <link>/posts/20190331/</link>
+      <link>https://ryu955.github.io/posts/20190331/</link>
       <pubDate>Sun, 31 Mar 2019 00:50:55 +0900</pubDate>
       
-      <guid>/posts/20190331/</guid>
+      <guid>https://ryu955.github.io/posts/20190331/</guid>
       <description> huga  a b  cc   </description>
     </item>
     
