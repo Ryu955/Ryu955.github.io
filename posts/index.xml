@@ -5,7 +5,7 @@
     <link>https://ryu955.github.io/posts/</link>
     <description>Recent content in Posts on Ryu955</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>ja-jp</language>
+    <language>jp</language>
     <lastBuildDate>Sun, 31 Mar 2019 01:57:06 +0900</lastBuildDate>
     
 	<atom:link href="https://ryu955.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
@@ -13,10 +13,10 @@
     
     <item>
       <title>ブログの移行</title>
-      <link>https://ryu955.github.io/posts/20190331/</link>
+      <link>https://ryu955.github.io/posts/2019/03/31/18/05/</link>
       <pubDate>Sun, 31 Mar 2019 01:57:06 +0900</pubDate>
       
-      <guid>https://ryu955.github.io/posts/20190331/</guid>
+      <guid>https://ryu955.github.io/posts/2019/03/31/18/05/</guid>
       <description>はじめに はてなブログから移行してみた。
 このテーマがかっこよくて気にいって使おうと思ったけれど、思いの他、設定にてこずった。
 過去のはてなに上げたブログは気が向いたら移行するかも。
