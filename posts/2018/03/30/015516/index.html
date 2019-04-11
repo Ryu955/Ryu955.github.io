@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title> LineRendererでGameObjectの周りを線を囲いたい :: Ryu955 — nanimo wakaranai</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="description" content=" やりたいこと ① 複数のマーカー(GameObject)の間を線で囲いたい
+ ② マーカーが増えたときも、それに合わせて線で囲ってほしい
+ 環境    名前  バージョン      macOS Sieera 10.12.6    Unity  2017.1.0f3 Personal     線を引く Unityで線を引く方法はいくつかあるが*1、今回はこの中で扱いが楽そうなLineRendererを使うことにした。
+LineRendererは LineRenderer.numPositions 頂点の数を設定し、LineRenderer.SetPosition(int,Vecter3) 描画したい頂点の順番と座標を引数に線を描画することができる。
+動的に線を描画 コードはこんな感じ。
+foreachでリストを回してるだけ。
+ 見た目はこんな感じ(デモ用に markerList の中に3つcubeを入れてある)。
+ 悩んだのは頂点の数を変える際、 LineRenderer.numPositions で設定する頂点の数はconstになると思ってたら、普通に変えることができた。
+markerList にGameObjectを追加しても描画してくれるし、GameObjectの座標を変えても線が追従してくれる様になった。
+
+線を囲う とりあえずマーカー同士を線で結ぶことはできたけど、囲うことはできてない。
+ なので、Inspectorをいじると、
+ いい感じになった。
+ 雑記 ブログを書く前は、LineRendererのinspectorにroopの設定があることを知らずに、線を囲うために下のコードで無理やりやっていた。
+ブログを書くためにLineRendererについて再度調べてるうちに、roopを見つけてこれでいいじゃん…ってなった。
+ *1:2Dの線を描画する【Unity】 - Qiita  "/>
+<meta name="keywords" content=""/>
+<meta name="robots" content="noodp"/>
+<link rel="canonical" href="https://ryu955.github.io/posts/2018/03/30/015516/" />
+
+
+<link rel="stylesheet" href="https://ryu955.github.io/assets/style.css">
+
+
+<link rel="stylesheet" href="https://ryu955.github.io/style.css">
+
+
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://ryu955.github.io/img/apple-touch-icon-144-precomposed.png">
+<link rel="shortcut icon" href="https://ryu955.github.io/img/favicon.png">
+
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content=" LineRendererでGameObjectの周りを線を囲いたい :: Ryu955 — nanimo wakaranai" />
+<meta name="twitter:description" content=" やりたいこと ① 複数のマーカー(GameObject)の間を線で囲いたい
+ ② マーカーが増えたときも、それに合わせて線で囲ってほしい
+ 環境    名前  バージョン      macOS Sieera 10.12.6    Unity  2017.1.0f3 Personal     線を引く Unityで線を引く方法はいくつかあるが*1、今回はこの中で扱いが楽そうなLineRendererを使うことにした。
+LineRendererは LineRenderer.numPositions 頂点の数を設定し、LineRenderer.SetPosition(int,Vecter3) 描画したい頂点の順番と座標を引数に線を描画することができる。
+動的に線を描画 コードはこんな感じ。
+foreachでリストを回してるだけ。
+ 見た目はこんな感じ(デモ用に markerList の中に3つcubeを入れてある)。
+ 悩んだのは頂点の数を変える際、 LineRenderer.numPositions で設定する頂点の数はconstになると思ってたら、普通に変えることができた。
+markerList にGameObjectを追加しても描画してくれるし、GameObjectの座標を変えても線が追従してくれる様になった。
+
+線を囲う とりあえずマーカー同士を線で結ぶことはできたけど、囲うことはできてない。
+ なので、Inspectorをいじると、
+ いい感じになった。
+ 雑記 ブログを書く前は、LineRendererのinspectorにroopの設定があることを知らずに、線を囲うために下のコードで無理やりやっていた。
+ブログを書くためにLineRendererについて再度調べてるうちに、roopを見つけてこれでいいじゃん…ってなった。
+ *1:2Dの線を描画する【Unity】 - Qiita  " />
+<meta name="twitter:site" content="https://ryu955.github.io/" />
+<meta name="twitter:creator" content="" />
+<meta name="twitter:image" content="">
+
+
+<meta property="og:locale" content="en" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content=" LineRendererでGameObjectの周りを線を囲いたい :: Ryu955 — nanimo wakaranai">
+<meta property="og:description" content=" やりたいこと ① 複数のマーカー(GameObject)の間を線で囲いたい
+ ② マーカーが増えたときも、それに合わせて線で囲ってほしい
+ 環境    名前  バージョン      macOS Sieera 10.12.6    Unity  2017.1.0f3 Personal     線を引く Unityで線を引く方法はいくつかあるが*1、今回はこの中で扱いが楽そうなLineRendererを使うことにした。
+LineRendererは LineRenderer.numPositions 頂点の数を設定し、LineRenderer.SetPosition(int,Vecter3) 描画したい頂点の順番と座標を引数に線を描画することができる。
+動的に線を描画 コードはこんな感じ。
+foreachでリストを回してるだけ。
+ 見た目はこんな感じ(デモ用に markerList の中に3つcubeを入れてある)。
+ 悩んだのは頂点の数を変える際、 LineRenderer.numPositions で設定する頂点の数はconstになると思ってたら、普通に変えることができた。
+markerList にGameObjectを追加しても描画してくれるし、GameObjectの座標を変えても線が追従してくれる様になった。
+
+線を囲う とりあえずマーカー同士を線で結ぶことはできたけど、囲うことはできてない。
+ なので、Inspectorをいじると、
+ いい感じになった。
+ 雑記 ブログを書く前は、LineRendererのinspectorにroopの設定があることを知らずに、線を囲うために下のコードで無理やりやっていた。
+ブログを書くためにLineRendererについて再度調べてるうちに、roopを見つけてこれでいいじゃん…ってなった。
+ *1:2Dの線を描画する【Unity】 - Qiita  " />
+<meta property="og:url" content="https://ryu955.github.io/posts/2018/03/30/015516/" />
+<meta property="og:site_name" content=" LineRendererでGameObjectの周りを線を囲いたい" />
+<meta property="og:image" content="">
+<meta property="og:image:width" content="2048">
+<meta property="og:image:height" content="1024">
+
+<meta property="article:published_time" content="2018-03-30 01:55:16 &#43;0000 UTC" />
+
+
+
+
+
+
+
+</head>
+<body class="dark-theme">
+<div class="container">
+  <header class="header">
+  <span class="header__inner">
+    <a href="https://ryu955.github.io/" class="logo" style="text-decoration: none;">
+  
+    <span class="logo__mark"><svg xmlns="http://www.w3.org/2000/svg" class="greater-icon" width="44" height="44" viewBox="0 0 44 44">
+  <polyline fill="none" stroke="#000" stroke-width="2" points="15 8 29.729 22.382 15 35.367"/>
+</svg>
+</span>
+    <span class="logo__text">hello friend</span>
+    <span class="logo__cursor"></span>
+  
+</a>
+
+    <span class="header__right">
+      
+        <nav class="menu">
+  <ul class="menu__inner menu__inner--desktop">
+    
+      
+        
+          <li><a href="/about">About</a></li>
+        
+      
+        
+          <li><a href="/tags">Tags</a></li>
+        
+      
+      
+    
+  </ul>
+
+  <ul class="menu__inner menu__inner--mobile">
+    
+      
+        <li><a href="/about">About</a></li>
+      
+    
+      
+        <li><a href="/tags">Tags</a></li>
+      
+    
+  </ul>
+</nav>
+
+        <span class="menu-trigger">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M0 0h24v24H0z" fill="none"/>
+            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+          </svg>
+        </span>
+      
+      <span class="theme-toggle">
+        <svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+</svg>
+
+      </span>
+    </span>
+  </span>
+</header>
+
+
+  <div class="content">
+    
+  <div class="post">
+    <h2 class="post-title"><a href="https://ryu955.github.io/posts/2018/03/30/015516/">LineRendererでGameObjectの周りを線を囲いたい</a></h2>
+    <div class="post-meta">
+      
+        <span class="post-date">
+            2018-03-30
+        </span>
+      
+      
+      
+    </div>
+
+    
+      <span class="post-tags">
+        
+          #<a href="https://ryu955.github.io/tags/unity">Unity</a>&nbsp;
+        
+          #<a href="https://ryu955.github.io/tags/linerenderer">LineRenderer</a>&nbsp;
+        
+      </span>
+    
+
+    
+
+    <div class="post-content">
+      
+
+<h2 id="やりたいこと">やりたいこと</h2>
+
+<p>① 複数のマーカー(GameObject)の間を線で囲いたい</p>
+
+
+  <figure class="left" >
+    <img src="/images/2018/03/30/015516/20180330001325.png"   />
+    
+  </figure>
+
+
+
+<p>② マーカーが増えたときも、それに合わせて線で囲ってほしい</p>
+
+
+  <figure class="left" >
+    <img src="/images/2018/03/30/015516/20180330001340.png"   />
+    
+  </figure>
+
+
+
+<h2 id="環境">環境</h2>
+
+<table>
+<thead>
+<tr>
+<th>名前  </th>
+<th>バージョン  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>macOS Sieera</td>
+<td>10.12.6 </td>
+</tr>
+<tr>
+<td>Unity  </td>
+<td>2017.1.0f3 Personal  </td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="線を引く">線を引く</h2>
+
+<p>Unityで線を引く方法はいくつかあるが<a href="#f-9a2c9429" name="fn-9a2c9429" title="[https://qiita.com/kwst/items/ad61e72562a8bcd9a9f7:title]">*1</a>、今回はこの中で扱いが楽そうな<a href="https://docs.unity3d.com/ja/current/ScriptReference/LineRenderer.html">LineRenderer</a>を使うことにした。</p>
+
+<p>LineRendererは <code>LineRenderer.numPositions</code> 頂点の数を設定し、<code>LineRenderer.SetPosition(int,Vecter3)</code> 描画したい頂点の順番と座標を引数に線を描画することができる。</p>
+
+<h2 id="動的に線を描画">動的に線を描画</h2>
+
+<p>コードはこんな感じ。</p>
+
+<p>foreachでリストを回してるだけ。</p>
+
+<script src="https://gist.github.com/Ryu955/8fa6adbe6d5e3d01c8ee2ef15fb5676e.js"></script>
+
+<p>見た目はこんな感じ(デモ用に <code>markerList</code> の中に3つcubeを入れてある)。</p>
+
+
+  <figure class="left" >
+    <img src="/images/2018/03/30/015516/20180330012657.png"   />
+    
+  </figure>
+
+
+
+<p>悩んだのは頂点の数を変える際、 <code>LineRenderer.numPositions</code> で設定する頂点の数はconstになると思ってたら、普通に変えることができた。</p>
+
+<p><code>markerList</code> にGameObjectを追加しても描画してくれるし、GameObjectの座標を変えても線が追従してくれる様になった。</p>
+
+<p><a href="https://gyazo.com/3575bd2d9b96221928d6336b30661aff"><img src="https://i.gyazo.com/3575bd2d9b96221928d6336b30661aff.gif" alt="https://gyazo.com/3575bd2d9b96221928d6336b30661aff" width="300"/></a></p>
+
+<h2 id="線を囲う">線を囲う</h2>
+
+<p>とりあえずマーカー同士を線で結ぶことはできたけど、囲うことはできてない。</p>
+
+
+  <figure class="left" >
+    <img src="/images/2018/03/30/015516/20180330010024.png"   />
+    
+  </figure>
+
+
+
+<p>なので、Inspectorをいじると、</p>
+
+
+  <figure class="left" >
+    <img src="/images/2018/03/30/015516/20180330013343.png"   />
+    
+  </figure>
+
+
+
+<p>いい感じになった。</p>
+
+
+  <figure class="left" >
+    <img src="/images/2018/03/30/015516/20180330013403.png"   />
+    
+  </figure>
+
+
+
+<h2 id="雑記">雑記</h2>
+
+<p>ブログを書く前は、LineRendererのinspectorにroopの設定があることを知らずに、線を囲うために下のコードで無理やりやっていた。</p>
+
+<p>ブログを書くためにLineRendererについて再度調べてるうちに、roopを見つけてこれでいいじゃん…ってなった。</p>
+
+<script src="https://gist.github.com/Ryu955/6eaa08424f5765372c146cb7234efc9e.js"></script>
+
+<div class="footnote">
+<a href="#fn-9a2c9429" name="f-9a2c9429" class="footnote-number">*1</a><span class="footnote-delimiter">:</span><span class="footnote-text"><a href="https://qiita.com/kwst/items/ad61e72562a8bcd9a9f7">2Dの線を描画する【Unity】 - Qiita</a></span>
+</div>
+
+    </div>
+    
+      <div class="pagination">
+        <div class="pagination__title">
+          <span class="pagination__title-h">Read other posts</span>
+          <hr />
+        </div>
+        <div class="pagination__buttons">
+          
+            <span class="button previous">
+              <a href="https://ryu955.github.io/posts/2018/04/06/022647/">
+                <span class="button__icon">←</span>
+                <span class="button__text">Unity初心者用サイトまとめ</span>
+              </a>
+            </span>
+          
+          
+            <span class="button next">
+              <a href="https://ryu955.github.io/posts/2018/02/20/002207/">
+                <span class="button__text">透過画像を使ったボタンの範囲から透過されている部分を削除する</span>
+                <span class="button__icon">→</span>
+              </a>
+            </span>
+          
+        </div>
+      </div>
+    
+
+    
+
+    </div>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <a href="https://ryu955.github.io/" class="logo" style="text-decoration: none;">
+  
+    <span class="logo__mark"><svg xmlns="http://www.w3.org/2000/svg" class="greater-icon" width="44" height="44" viewBox="0 0 44 44">
+  <polyline fill="none" stroke="#000" stroke-width="2" points="15 8 29.729 22.382 15 35.367"/>
+</svg>
+</span>
+    <span class="logo__text">hello friend</span>
+    <span class="logo__cursor"></span>
+  
+</a>
+
+      <div class="copyright">
+        <span>© 2019 Powered by <a href="http://gohugo.io">Hugo</a></span>
+        <span>Theme created by <a href="https://twitter.com/panr">panr</a></span>
+      </div>
+    
+  </div>
+</footer>
+
+<script src="https://ryu955.github.io/assets/main.js"></script>
+<script src="https://ryu955.github.io/assets/prism.js"></script>
+
+  
+</div>
+
+</body>
+</html>

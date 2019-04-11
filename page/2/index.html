@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="generator" content="Hugo 0.54.0" />
+  
+    <title>Ryu955 — nanimo wakaranai</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="description" content="nanimo wakaranai"/>
+<meta name="keywords" content=""/>
+<meta name="robots" content="noodp"/>
+<link rel="canonical" href="https://ryu955.github.io/" />
+
+
+<link rel="stylesheet" href="https://ryu955.github.io/assets/style.css">
+
+
+<link rel="stylesheet" href="https://ryu955.github.io/style.css">
+
+
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://ryu955.github.io/img/apple-touch-icon-144-precomposed.png">
+<link rel="shortcut icon" href="https://ryu955.github.io/img/favicon.png">
+
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Ryu955 — nanimo wakaranai" />
+<meta name="twitter:description" content="" />
+<meta name="twitter:site" content="https://ryu955.github.io/" />
+<meta name="twitter:creator" content="" />
+<meta name="twitter:image" content="">
+
+
+<meta property="og:locale" content="en" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Ryu955 — nanimo wakaranai">
+<meta property="og:description" content="" />
+<meta property="og:url" content="https://ryu955.github.io/" />
+<meta property="og:site_name" content="Ryu955" />
+<meta property="og:image" content="">
+<meta property="og:image:width" content="2048">
+<meta property="og:image:height" content="1024">
+
+
+
+
+
+<link href="https://ryu955.github.io/index.xml" rel="alternate" type="application/rss+xml" title="Ryu955" />
+
+
+
+
+
+</head>
+<body class="dark-theme">
+<div class="container">
+  <header class="header">
+  <span class="header__inner">
+    <a href="https://ryu955.github.io/" class="logo" style="text-decoration: none;">
+  
+    <span class="logo__mark"><svg xmlns="http://www.w3.org/2000/svg" class="greater-icon" width="44" height="44" viewBox="0 0 44 44">
+  <polyline fill="none" stroke="#000" stroke-width="2" points="15 8 29.729 22.382 15 35.367"/>
+</svg>
+</span>
+    <span class="logo__text">hello friend</span>
+    <span class="logo__cursor"></span>
+  
+</a>
+
+    <span class="header__right">
+      
+        <nav class="menu">
+  <ul class="menu__inner menu__inner--desktop">
+    
+      
+        
+          <li><a href="/about">About</a></li>
+        
+      
+        
+          <li><a href="/tags">Tags</a></li>
+        
+      
+      
+    
+  </ul>
+
+  <ul class="menu__inner menu__inner--mobile">
+    
+      
+        <li><a href="/about">About</a></li>
+      
+    
+      
+        <li><a href="/tags">Tags</a></li>
+      
+    
+  </ul>
+</nav>
+
+        <span class="menu-trigger">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M0 0h24v24H0z" fill="none"/>
+            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+          </svg>
+        </span>
+      
+      <span class="theme-toggle">
+        <svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+</svg>
+
+      </span>
+    </span>
+  </span>
+</header>
+
+
+  <div class="content">
+    
+  <div class="posts">
+    
+    
+    
+
+    
+    <div class="post on-list">
+      <h1 class="post-title"><a href="https://ryu955.github.io/posts/2018/12/01/203052/">SKKのすゝめ</a></h1>
+      <div class="post-meta">
+        <span class="post-date">
+          2018-12-01
+        </span>
+        
+        
+      </div>
+
+
+      
+
+      
+
+      <div class="post-content">
+        
+          
+            はじめに 今年も気がつけばアドベントカレンダーの時期になっていました。 なにかの Advent Calendar 2018 - Adventar 全て埋めて完走目指しましょう。
+今回話す内容はIMEについてです。 その中でも、私が使っているSKK IMEを布教しようと思い書きます。
+SKK(Simple Kana to Kanji conversion program)とは  SKKは佐藤雅彦教授により開発されたEmacs用の日本語入力プログラムです。日本語の文法解析を一切行なわないという斬新な設計思想で作られており、シフトキーによる補助操作で語句の区切りを人間側が明示することで、口語や方言、未知の造語といった従来の日本語入力方式が特に苦手とする文に対しても送りがなの誤認識が原理的に発生しないという優れた特性を持っています。 出展：SKK日本語入力FEP
+ らしいです。
+特徴 よく使われているであろう、Google IMEやMicrosoft IME等は日本語を打つ際、形態素解析をして、良い感じに文章をまとめて変換してくれますが、SKKは形態素解析を行いません。
+じゃあ、どうやって変換するんだと言うと、ユーザ自身が、この文字は漢字に変換したいという範囲を決めます。
+使っている様子 とりあえず、動いているところを見ないとピンとこないと思うので、こんな感じ。
+ 使いかた 漢字の開始位置、送り仮名の開始位置で、shiftキーを押します。
+具体的に、
+我輩は猫である。名前はまだ無い
+を打つためには
+Wagahai haNeko dearu。Namae hamadaNaI
+と入力します。
+メリット 楽しい 最初はめっっっちゃ打ちにくいですが、慣れると、かなり打ちやすく、特に長文を気持よく打つことができます。
+軽い 形態素解析を行わないからか、動作がかなり軽快です。
+Returnキーを押さない 変換の確定などはReturnキーではなく、別のどのキーでもいいので、結果的にReturnキーを押さなくても大丈夫になります。
+くわしくは ここを見てください。
+AquaSKK プロジェクト::迷っている人へ
+SandS SKKを使うと必然的にShiftキーを沢山押すことになります。 そうなると、小指が過労死します。
+そこで、SKKを使う上でなくてはならない存在のSandS(Shift and Space)です。
+スペースキーをShiftキーとして使用することができる設定です。 じゃあ、スペースキーはどうなるのかというと、スペースキー単体で押したときはスペースキーになり、他のキーと同時押しした時はShiftキーとなります。
+これにより、親指でShiftキーが押せるので、楽にSKKを使うことができます。
+SKK導入 macOS<br />
+ここからapkをダウンロードしてやる。
+Windows SKK日本語入力FEP 今だ！インストールだ！
+          
+        
+      </div>
+      <div><a class="read-more button" href="/posts/2018/12/01/203052/">Read more →</a></div>
+    </div>
+    
+    <div class="post on-list">
+      <h1 class="post-title"><a href="https://ryu955.github.io/posts/2018/06/06/115409/">マウス操作をVimライクにやる</a></h1>
+      <div class="post-meta">
+        <span class="post-date">
+          2018-06-06
+        </span>
+        
+        
+      </div>
+
+
+      
+
+      
+
+      <div class="post-content">
+        
+          
+        
+      </div>
+      <div><a class="read-more button" href="/posts/2018/06/06/115409/">Read more →</a></div>
+    </div>
+    
+    <div class="post on-list">
+      <h1 class="post-title"><a href="https://ryu955.github.io/posts/2018/04/28/173752/">Kotlinを始めた</a></h1>
+      <div class="post-meta">
+        <span class="post-date">
+          2018-04-28
+        </span>
+        
+        
+      </div>
+
+
+      
+
+      
+
+      <div class="post-content">
+        
+          
+        
+      </div>
+      <div><a class="read-more button" href="/posts/2018/04/28/173752/">Read more →</a></div>
+    </div>
+    
+    <div class="post on-list">
+      <h1 class="post-title"><a href="https://ryu955.github.io/posts/2018/04/06/022647/">Unity初心者用サイトまとめ</a></h1>
+      <div class="post-meta">
+        <span class="post-date">
+          2018-04-06
+        </span>
+        
+        
+      </div>
+
+
+      
+
+      
+
+      <div class="post-content">
+        
+          
+            はじめに Unity始めたばかりの人たちが研究室に多かったので、参考になりそうなサイトをかき集めて見ました。
+Unityはバージョンアップで色々変わるので、サイトに乗っているバージョンと自分の使うバージョンを確認してください。
+チュートリアル系 Unity - はじめてのUnity 初学者はとりあえずこれやっておけば間違いないと思います。 本当に基礎的なことが詰め込まれた良いチュートリアルだと思います。
+ほかにもUnity公式のチュートリアルはどれも質が高いと思います。 Unity - Learn - Modules
+【Unity2D】Unityで2Dミニゲームを作るチュートリアル（第１回） - Qiita 私がUnityを初めて触ったときに、一番最初にやったチュートリアルがこれでした。 パーティクルやオブジェクトをランダムに動かすといったことをこれで学ぶことができました。
+【Unity入門】60分で作るシューティングゲーム　第１回 - おもちゃラボ 私はこのチュートリアルでprefabについていろいろ学ぶことができました。 このチュートリアル以外にも様々な記事があるので目を通して見ると良いと思います。 おもちゃラボ
+また、このブログを書いているひとはUnityの教科書 Unity 2017完全対応版 2D&amp;3Dスマートフォンゲーム入門講座 (Entertainment&amp;IDEA) | 北村 愛実 |本 | 通販 | Amazonを書いたひとです。私もUnity5時代の本を持っています。 この本はイラストでの解説が多くわかりやすいのでおすすめです。
+Unity入門-openbook openbookにあるチュートリアルです。 ブロック崩しだけ実際にやった記憶があります。 馴染みのあるゲームを自分で作るのは楽しかったです。
+Unity入門 (全26回) - プログラミングならドットインストール 自分はやったことありませんが、動画で実際にやってるところを見ながらのほうがいい人はドットインストールは良いと思います。 ただ、Unityのバージョンが4.2.0なのが…
+情報収集 Unity スクリプトリファレンス Unityの公式リファレンスは結構しっかりしてるのでよく使います。
+テラシュールブログ Unityについて調べ物する際、必ず目にします。 実行時のGIFを載せてくてるし、説明もうまいのでわかりやすいです。 テラシュールブログのありがたみはUnity触り始めてすぐ痛感すると思います。
+Unity(C#)初心者・入門者向けチュートリアル ひよこのたまご テラシュールブログの次によく見ることになると思います。 バックグラウンドが黄色で目がチカチカして見にくい点以外はとても良いです。
+私はやったことがないのですが、チュートリアルもたくさん載っています。 Unity5チュートリアルアプリ一覧 - Unity(C#)初心者・入門者向けチュートリアル ひよこのたまご
+ブログ 【Unity】素人が7日間クソゲーを作り続けてわかったこと | uinyan．com 有名な記事なのでUnityやったことなくても知ってるひとは多いと思います。 この記事と合わせて後日談である【Unity】クソゲーを作って晒したら世界が変わった件 | uinyan．comを読むと、自分もやらないとなって気持ちになれます。
+          
+        
+      </div>
+      <div><a class="read-more button" href="/posts/2018/04/06/022647/">Read more →</a></div>
+    </div>
+    
+    <div class="post on-list">
+      <h1 class="post-title"><a href="https://ryu955.github.io/posts/2018/03/30/015516/">LineRendererでGameObjectの周りを線を囲いたい</a></h1>
+      <div class="post-meta">
+        <span class="post-date">
+          2018-03-30
+        </span>
+        
+        
+      </div>
+
+
+      
+        <span class="post-tags">
+          
+            #<a href="https://ryu955.github.io/tags/unity">Unity</a>&nbsp;
+          
+            #<a href="https://ryu955.github.io/tags/linerenderer">LineRenderer</a>&nbsp;
+          
+        </span>
+      
+
+      
+
+      <div class="post-content">
+        
+          
+        
+      </div>
+      <div><a class="read-more button" href="/posts/2018/03/30/015516/">Read more →</a></div>
+    </div>
+    
+    <div class="pagination">
+  <div class="pagination__buttons">
+    
+      <span class="button previous">
+        <a href="/">
+          <span class="button__icon">←</span>
+          <span class="button__text">Newer posts</span>
+        </a>
+      </span>
+    
+    
+      <span class="button next">
+        <a href="/page/3/">
+          <span class="button__text">Older posts</span>
+          <span class="button__icon">→</span>
+        </a>
+      </span>
+    
+  </div>
+</div>
+
+  </div>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <a href="https://ryu955.github.io/" class="logo" style="text-decoration: none;">
+  
+    <span class="logo__mark"><svg xmlns="http://www.w3.org/2000/svg" class="greater-icon" width="44" height="44" viewBox="0 0 44 44">
+  <polyline fill="none" stroke="#000" stroke-width="2" points="15 8 29.729 22.382 15 35.367"/>
+</svg>
+</span>
+    <span class="logo__text">hello friend</span>
+    <span class="logo__cursor"></span>
+  
+</a>
+
+      <div class="copyright">
+        <span>© 2019 Powered by <a href="http://gohugo.io">Hugo</a></span>
+        <span>Theme created by <a href="https://twitter.com/panr">panr</a></span>
+      </div>
+    
+  </div>
+</footer>
+
+<script src="https://ryu955.github.io/assets/main.js"></script>
+<script src="https://ryu955.github.io/assets/prism.js"></script>
+
+  
+</div>
+
+</body>
+</html>

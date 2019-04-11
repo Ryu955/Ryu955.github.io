@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ラズパイ on Ryu955</title>
+    <link>https://ryu955.github.io/tags/%E3%83%A9%E3%82%BA%E3%83%91%E3%82%A4/</link>
+    <description>Recent content in ラズパイ on Ryu955</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>jp</language>
+    <lastBuildDate>Wed, 20 Jul 2016 03:08:14 +0000</lastBuildDate>
+    
+	<atom:link href="https://ryu955.github.io/tags/%E3%83%A9%E3%82%BA%E3%83%91%E3%82%A4/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>パイ作り</title>
+      <link>https://ryu955.github.io/posts/2016/07/20/030814/</link>
+      <pubDate>Wed, 20 Jul 2016 03:08:14 +0000</pubDate>
+      
+      <guid>https://ryu955.github.io/posts/2016/07/20/030814/</guid>
+      <description>正月あたりに買って家で眠ってたラズパイをようやく開封して遊んでました．
+ raspbianがうまく入らな打て3回くらい入れなおしてようやく付きました   日本語化しようとしたら文字化けしたので諦めたの図  SSHで繋がらないって3時間くらい頭を抱えてたらLAN指してるところがネットにつながってなかったという理由で切れながらも初期設定は終わりました．
+この後何に使うか全く考えてないのでとりあえず思い浮かぶまで放置します．</description>
+    </item>
+    
+  </channel>
+</rss>

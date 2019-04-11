@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>プラグイン on Ryu955</title>
+    <link>https://ryu955.github.io/tags/%E3%83%97%E3%83%A9%E3%82%B0%E3%82%A4%E3%83%B3/</link>
+    <description>Recent content in プラグイン on Ryu955</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>jp</language>
+    <lastBuildDate>Wed, 06 Sep 2017 05:27:07 +0000</lastBuildDate>
+    
+	<atom:link href="https://ryu955.github.io/tags/%E3%83%97%E3%83%A9%E3%82%B0%E3%82%A4%E3%83%B3/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>ActionSheetPickerを使って時間を選択する</title>
+      <link>https://ryu955.github.io/posts/2017/09/06/052707/</link>
+      <pubDate>Wed, 06 Sep 2017 05:27:07 +0000</pubDate>
+      
+      <guid>https://ryu955.github.io/posts/2017/09/06/052707/</guid>
+      <description>はじめに  時刻表のアプリとかでよく見る，選択したらActionSheetとPickerが混ざったやようなやつが開いて時間を選べるやつを実装したかった   使ったやつ  ActionSheetPicker-3.0  名前の通りActionSheetとPickerが組み合わさったものが使えるプラグイン
+探し求めてたものがピンポイントでありました
+環境  macOS Sierra 10.12.2 Xcode 8.3.1 Swift3 Carthage 0.25.0  ActionSheetPicker-3.0のインポート ActionSheetPickerはライブラリ管理ツールを用いてインポートします．
+今回はライブラリ管理ツールにCarthageを用いますが，CocoaPodsでもできます．
+Carthageのインポートはreadmeに全て書いてあります．
+Carthage自体の使い方はこの記事が丁寧で分かりやすかったので，ここをみつつInputFile名を $(SRCROOT)/Carthage/Build/iOS/CoreActionSheetPicker.framework に置き換えれば使ったことない人でも問題ないと思います．
+こんな感じ  storyboard まず，Main.storyboardにラベルとボタンを置きます．  その後，スクリプトにそれぞれを紐付けます． ボタンはConnectionをActionにします．
+ ソースコード storyboardに置いたボタンに動作を記述します．
+gist.github.com
+実行結果  解説  9行目の datePickerMode の値を変更するとPickerの選択肢が変わる  UIDatePickerMode.date だと下の図みたいに日付だけとか UIDatePickerMode. でいろいろサジェストされるから用途に合ったものを選択するといいと思います      13行目のフォーマットを書き換えることで任意の表示方法にできる 22行目の数字の値の感覚で分が表示される  github リポジトリ
+cloneした後，ディレクトリ内でCarthageをビルドしないとエラーが出ると思うので ，ターミナルでcloneしたディレクトリの中で carthage update &amp;ndash;platform iOS を実行</description>
+    </item>
+    
+  </channel>
+</rss>

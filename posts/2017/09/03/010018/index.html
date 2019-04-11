@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>golang.tokyo #8 に行ってきた :: Ryu955 — nanimo wakaranai</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="description" content=" はじめに  golang.tokyo #8に行ってきました  golang.tokyo #8 - connpass   ちなみにGo自体はA Tour of Goをやって，スクレイピングをやったくらいしか触ったことないです 開催場所のDMM.comの中は森でした  セッション 一人目  一人目の登壇者の星一さんはGoで作成した2Dゲームライブラリebitenについて発表されていました  発表資料 ebitenとは   普段Unityでゲーム開発をしてるから，こういったゲームエンジンがどういう風に作られているかという話が面白かった とりあえず，ebitenのwikiにあったTutorialsをやってみました 何かしらのGoの学習ついでになにかゲームをつくって見ようと思います  二人目  二人目の登壇者はzcheeさんは個人でつくっているGoのプロダクトについて発表されていました  発表資料      個人で作っているgoのプロダクト by zchee編  from Koichi Shiraishi 
+ 自分が不満を持ったことは自分で解決させるというのは大切なことだと思いました  感想  Go自体の知識はほぼない状態でしたが，Goにかぎらず様々なことに通じるセクションだったため面白かったです  "/>
+<meta name="keywords" content=""/>
+<meta name="robots" content="noodp"/>
+<link rel="canonical" href="https://ryu955.github.io/posts/2017/09/03/010018/" />
+
+
+<link rel="stylesheet" href="https://ryu955.github.io/assets/style.css">
+
+
+<link rel="stylesheet" href="https://ryu955.github.io/style.css">
+
+
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://ryu955.github.io/img/apple-touch-icon-144-precomposed.png">
+<link rel="shortcut icon" href="https://ryu955.github.io/img/favicon.png">
+
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="golang.tokyo #8 に行ってきた :: Ryu955 — nanimo wakaranai" />
+<meta name="twitter:description" content=" はじめに  golang.tokyo #8に行ってきました  golang.tokyo #8 - connpass   ちなみにGo自体はA Tour of Goをやって，スクレイピングをやったくらいしか触ったことないです 開催場所のDMM.comの中は森でした  セッション 一人目  一人目の登壇者の星一さんはGoで作成した2Dゲームライブラリebitenについて発表されていました  発表資料 ebitenとは   普段Unityでゲーム開発をしてるから，こういったゲームエンジンがどういう風に作られているかという話が面白かった とりあえず，ebitenのwikiにあったTutorialsをやってみました 何かしらのGoの学習ついでになにかゲームをつくって見ようと思います  二人目  二人目の登壇者はzcheeさんは個人でつくっているGoのプロダクトについて発表されていました  発表資料      個人で作っているgoのプロダクト by zchee編  from Koichi Shiraishi 
+ 自分が不満を持ったことは自分で解決させるというのは大切なことだと思いました  感想  Go自体の知識はほぼない状態でしたが，Goにかぎらず様々なことに通じるセクションだったため面白かったです  " />
+<meta name="twitter:site" content="https://ryu955.github.io/" />
+<meta name="twitter:creator" content="" />
+<meta name="twitter:image" content="">
+
+
+<meta property="og:locale" content="en" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="golang.tokyo #8 に行ってきた :: Ryu955 — nanimo wakaranai">
+<meta property="og:description" content=" はじめに  golang.tokyo #8に行ってきました  golang.tokyo #8 - connpass   ちなみにGo自体はA Tour of Goをやって，スクレイピングをやったくらいしか触ったことないです 開催場所のDMM.comの中は森でした  セッション 一人目  一人目の登壇者の星一さんはGoで作成した2Dゲームライブラリebitenについて発表されていました  発表資料 ebitenとは   普段Unityでゲーム開発をしてるから，こういったゲームエンジンがどういう風に作られているかという話が面白かった とりあえず，ebitenのwikiにあったTutorialsをやってみました 何かしらのGoの学習ついでになにかゲームをつくって見ようと思います  二人目  二人目の登壇者はzcheeさんは個人でつくっているGoのプロダクトについて発表されていました  発表資料      個人で作っているgoのプロダクト by zchee編  from Koichi Shiraishi 
+ 自分が不満を持ったことは自分で解決させるというのは大切なことだと思いました  感想  Go自体の知識はほぼない状態でしたが，Goにかぎらず様々なことに通じるセクションだったため面白かったです  " />
+<meta property="og:url" content="https://ryu955.github.io/posts/2017/09/03/010018/" />
+<meta property="og:site_name" content="golang.tokyo #8 に行ってきた" />
+<meta property="og:image" content="">
+<meta property="og:image:width" content="2048">
+<meta property="og:image:height" content="1024">
+
+<meta property="article:published_time" content="2017-09-03 01:00:18 &#43;0000 UTC" />
+
+
+
+
+
+
+
+</head>
+<body class="dark-theme">
+<div class="container">
+  <header class="header">
+  <span class="header__inner">
+    <a href="https://ryu955.github.io/" class="logo" style="text-decoration: none;">
+  
+    <span class="logo__mark"><svg xmlns="http://www.w3.org/2000/svg" class="greater-icon" width="44" height="44" viewBox="0 0 44 44">
+  <polyline fill="none" stroke="#000" stroke-width="2" points="15 8 29.729 22.382 15 35.367"/>
+</svg>
+</span>
+    <span class="logo__text">hello friend</span>
+    <span class="logo__cursor"></span>
+  
+</a>
+
+    <span class="header__right">
+      
+        <nav class="menu">
+  <ul class="menu__inner menu__inner--desktop">
+    
+      
+        
+          <li><a href="/about">About</a></li>
+        
+      
+        
+          <li><a href="/tags">Tags</a></li>
+        
+      
+      
+    
+  </ul>
+
+  <ul class="menu__inner menu__inner--mobile">
+    
+      
+        <li><a href="/about">About</a></li>
+      
+    
+      
+        <li><a href="/tags">Tags</a></li>
+      
+    
+  </ul>
+</nav>
+
+        <span class="menu-trigger">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M0 0h24v24H0z" fill="none"/>
+            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+          </svg>
+        </span>
+      
+      <span class="theme-toggle">
+        <svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+</svg>
+
+      </span>
+    </span>
+  </span>
+</header>
+
+
+  <div class="content">
+    
+  <div class="post">
+    <h2 class="post-title"><a href="https://ryu955.github.io/posts/2017/09/03/010018/">golang.tokyo #8 に行ってきた</a></h2>
+    <div class="post-meta">
+      
+        <span class="post-date">
+            2017-09-03
+        </span>
+      
+      
+      
+    </div>
+
+    
+      <span class="post-tags">
+        
+          #<a href="https://ryu955.github.io/tags/%E5%8B%89%E5%BC%B7%E4%BC%9A">勉強会</a>&nbsp;
+        
+      </span>
+    
+
+    
+
+    <div class="post-content">
+      
+
+<h2 id="はじめに">はじめに</h2>
+
+<ul>
+<li>golang.tokyo #8に行ってきました
+
+<ul>
+<li><a href="https://golangtokyo.connpass.com/event/63531/">golang.tokyo #8 - connpass</a></li>
+</ul>
+</li>
+<li>ちなみにGo自体はA Tour of Goをやって，スクレイピングをやったくらいしか触ったことないです</li>
+<li>開催場所のDMM.comの中は森でした</li>
+</ul>
+
+<h2 id="セッション">セッション</h2>
+
+<h3 id="一人目">一人目</h3>
+
+<ul>
+<li>一人目の登壇者の星一さんはGoで作成した2Dゲームライブラリebitenについて発表されていました
+
+<ul>
+<li><a href="https://docs.google.com/presentation/d/e/2PACX-1vSvgV6cyIheAXX0r8dBSyLbUoI4k44TgXfLgxPlWSkXnXqkyEOHTwrVea3lvwUr9ZhZ7v6nU8UwVsGX/pub?start=false&amp;loop=false&amp;delayms=3000&amp;slide=id.p">発表資料</a></li>
+<li><a href="http://qiita.com/hajimehoshi/items/d531f0c0e3f5ec5287c3">ebitenとは</a></li>
+</ul>
+</li>
+<li>普段Unityでゲーム開発をしてるから，こういったゲームエンジンがどういう風に作られているかという話が面白かった</li>
+<li>とりあえず，ebitenのwikiにあったTutorialsをやってみました</li>
+<li>何かしらのGoの学習ついでになにかゲームをつくって見ようと思います</li>
+</ul>
+
+<h3 id="二人目">二人目</h3>
+
+<ul>
+<li>二人目の登壇者はzcheeさんは個人でつくっているGoのプロダクトについて発表されていました
+
+<ul>
+<li>発表資料</li>
+</ul>
+</li>
+</ul>
+
+<iframe src="//www.slideshare.net/slideshow/embed_code/key/HNLp9wzhBBeQMY" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen=""> </iframe>
+
+<p><div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/KoichiShiraishi/go-by-zchee" title="個人で作っているgoのプロダクト by zchee編" target="_blank">個人で作っているgoのプロダクト by zchee編</a> </strong> from <strong><a href="https://www.slideshare.net/KoichiShiraishi" target="_blank">Koichi Shiraishi</a></strong> </div></p>
+
+<ul>
+<li>自分が不満を持ったことは自分で解決させるというのは大切なことだと思いました</li>
+</ul>
+
+<h2 id="感想">感想</h2>
+
+<ul>
+<li>Go自体の知識はほぼない状態でしたが，Goにかぎらず様々なことに通じるセクションだったため面白かったです</li>
+</ul>
+
+    </div>
+    
+      <div class="pagination">
+        <div class="pagination__title">
+          <span class="pagination__title-h">Read other posts</span>
+          <hr />
+        </div>
+        <div class="pagination__buttons">
+          
+            <span class="button previous">
+              <a href="https://ryu955.github.io/posts/2017/09/04/023913/">
+                <span class="button__icon">←</span>
+                <span class="button__text">大学のバスの時刻表をスクレイピングする</span>
+              </a>
+            </span>
+          
+          
+            <span class="button next">
+              <a href="https://ryu955.github.io/posts/2017/08/25/005509/">
+                <span class="button__text">xamlで宣言したImageをスクリプトから動かす</span>
+                <span class="button__icon">→</span>
+              </a>
+            </span>
+          
+        </div>
+      </div>
+    
+
+    
+
+    </div>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <a href="https://ryu955.github.io/" class="logo" style="text-decoration: none;">
+  
+    <span class="logo__mark"><svg xmlns="http://www.w3.org/2000/svg" class="greater-icon" width="44" height="44" viewBox="0 0 44 44">
+  <polyline fill="none" stroke="#000" stroke-width="2" points="15 8 29.729 22.382 15 35.367"/>
+</svg>
+</span>
+    <span class="logo__text">hello friend</span>
+    <span class="logo__cursor"></span>
+  
+</a>
+
+      <div class="copyright">
+        <span>© 2019 Powered by <a href="http://gohugo.io">Hugo</a></span>
+        <span>Theme created by <a href="https://twitter.com/panr">panr</a></span>
+      </div>
+    
+  </div>
+</footer>
+
+<script src="https://ryu955.github.io/assets/main.js"></script>
+<script src="https://ryu955.github.io/assets/prism.js"></script>
+
+  
+</div>
+
+</body>
+</html>

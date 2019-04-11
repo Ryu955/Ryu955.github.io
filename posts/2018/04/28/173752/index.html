@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>Kotlinを始めた :: Ryu955 — nanimo wakaranai</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="description" content="はじめに android開発をしようと思い、せっかくなのでJavaではなくてKotlinでやってみようと思った。
+Kotlin助走読本 Kotlinは名前を知ってるくらいしか知識がなく、何をすればいいかわからなかったので調べたら、日本Kotlinユーザグループが公開してる助走本なるものがあるらしくとりあえず読むことにしました。 kotlin-prior-learning-book.pdf - Google ドライブ
+Kotlinの歴史から始まり、基本的な文法が書かれていて、ところどころJavaとの比較が書いてありました。
+ストップウォッチ 試しにアプリ作ってみたいなと思い、以下のサイトを写経してみた。 正式採用の「Kotlin」で挑戦！ 初めてのAndroidアプリ開発 〜ストップウォッチを作ってみよう〜 - エンジニアHub｜若手Webエンジニアのキャリアを考える！
+UIとスクリプトの紐付けはXcodeのほうが直感的で便利だと思いましたが、Android Studioの補完は強くてJetBrains製はやっぱり良いなと思いました。
+Kotlinスタートブック ストップウォッチアプリを作成した上で、わからないことが多すぎたので Kotlinスタートブック をかいました。 とりあえずやっていこうと思います。"/>
+<meta name="keywords" content=""/>
+<meta name="robots" content="noodp"/>
+<link rel="canonical" href="https://ryu955.github.io/posts/2018/04/28/173752/" />
+
+
+<link rel="stylesheet" href="https://ryu955.github.io/assets/style.css">
+
+
+<link rel="stylesheet" href="https://ryu955.github.io/style.css">
+
+
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://ryu955.github.io/img/apple-touch-icon-144-precomposed.png">
+<link rel="shortcut icon" href="https://ryu955.github.io/img/favicon.png">
+
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Kotlinを始めた :: Ryu955 — nanimo wakaranai" />
+<meta name="twitter:description" content="はじめに android開発をしようと思い、せっかくなのでJavaではなくてKotlinでやってみようと思った。
+Kotlin助走読本 Kotlinは名前を知ってるくらいしか知識がなく、何をすればいいかわからなかったので調べたら、日本Kotlinユーザグループが公開してる助走本なるものがあるらしくとりあえず読むことにしました。 kotlin-prior-learning-book.pdf - Google ドライブ
+Kotlinの歴史から始まり、基本的な文法が書かれていて、ところどころJavaとの比較が書いてありました。
+ストップウォッチ 試しにアプリ作ってみたいなと思い、以下のサイトを写経してみた。 正式採用の「Kotlin」で挑戦！ 初めてのAndroidアプリ開発 〜ストップウォッチを作ってみよう〜 - エンジニアHub｜若手Webエンジニアのキャリアを考える！
+UIとスクリプトの紐付けはXcodeのほうが直感的で便利だと思いましたが、Android Studioの補完は強くてJetBrains製はやっぱり良いなと思いました。
+Kotlinスタートブック ストップウォッチアプリを作成した上で、わからないことが多すぎたので Kotlinスタートブック をかいました。 とりあえずやっていこうと思います。" />
+<meta name="twitter:site" content="https://ryu955.github.io/" />
+<meta name="twitter:creator" content="" />
+<meta name="twitter:image" content="">
+
+
+<meta property="og:locale" content="en" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Kotlinを始めた :: Ryu955 — nanimo wakaranai">
+<meta property="og:description" content="はじめに android開発をしようと思い、せっかくなのでJavaではなくてKotlinでやってみようと思った。
+Kotlin助走読本 Kotlinは名前を知ってるくらいしか知識がなく、何をすればいいかわからなかったので調べたら、日本Kotlinユーザグループが公開してる助走本なるものがあるらしくとりあえず読むことにしました。 kotlin-prior-learning-book.pdf - Google ドライブ
+Kotlinの歴史から始まり、基本的な文法が書かれていて、ところどころJavaとの比較が書いてありました。
+ストップウォッチ 試しにアプリ作ってみたいなと思い、以下のサイトを写経してみた。 正式採用の「Kotlin」で挑戦！ 初めてのAndroidアプリ開発 〜ストップウォッチを作ってみよう〜 - エンジニアHub｜若手Webエンジニアのキャリアを考える！
+UIとスクリプトの紐付けはXcodeのほうが直感的で便利だと思いましたが、Android Studioの補完は強くてJetBrains製はやっぱり良いなと思いました。
+Kotlinスタートブック ストップウォッチアプリを作成した上で、わからないことが多すぎたので Kotlinスタートブック をかいました。 とりあえずやっていこうと思います。" />
+<meta property="og:url" content="https://ryu955.github.io/posts/2018/04/28/173752/" />
+<meta property="og:site_name" content="Kotlinを始めた" />
+<meta property="og:image" content="">
+<meta property="og:image:width" content="2048">
+<meta property="og:image:height" content="1024">
+
+<meta property="article:published_time" content="2018-04-28 17:37:52 &#43;0000 UTC" />
+
+
+
+
+
+
+
+</head>
+<body class="dark-theme">
+<div class="container">
+  <header class="header">
+  <span class="header__inner">
+    <a href="https://ryu955.github.io/" class="logo" style="text-decoration: none;">
+  
+    <span class="logo__mark"><svg xmlns="http://www.w3.org/2000/svg" class="greater-icon" width="44" height="44" viewBox="0 0 44 44">
+  <polyline fill="none" stroke="#000" stroke-width="2" points="15 8 29.729 22.382 15 35.367"/>
+</svg>
+</span>
+    <span class="logo__text">hello friend</span>
+    <span class="logo__cursor"></span>
+  
+</a>
+
+    <span class="header__right">
+      
+        <nav class="menu">
+  <ul class="menu__inner menu__inner--desktop">
+    
+      
+        
+          <li><a href="/about">About</a></li>
+        
+      
+        
+          <li><a href="/tags">Tags</a></li>
+        
+      
+      
+    
+  </ul>
+
+  <ul class="menu__inner menu__inner--mobile">
+    
+      
+        <li><a href="/about">About</a></li>
+      
+    
+      
+        <li><a href="/tags">Tags</a></li>
+      
+    
+  </ul>
+</nav>
+
+        <span class="menu-trigger">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M0 0h24v24H0z" fill="none"/>
+            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+          </svg>
+        </span>
+      
+      <span class="theme-toggle">
+        <svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+</svg>
+
+      </span>
+    </span>
+  </span>
+</header>
+
+
+  <div class="content">
+    
+  <div class="post">
+    <h2 class="post-title"><a href="https://ryu955.github.io/posts/2018/04/28/173752/">Kotlinを始めた</a></h2>
+    <div class="post-meta">
+      
+        <span class="post-date">
+            2018-04-28
+        </span>
+      
+      
+      
+    </div>
+
+    
+
+    
+
+    <div class="post-content">
+      
+
+<h2 id="はじめに">はじめに</h2>
+
+<p>android開発をしようと思い、せっかくなのでJavaではなくてKotlinでやってみようと思った。</p>
+
+<h2 id="kotlin助走読本">Kotlin助走読本</h2>
+
+<p>Kotlinは名前を知ってるくらいしか知識がなく、何をすればいいかわからなかったので調べたら、日本Kotlinユーザグループが公開してる助走本なるものがあるらしくとりあえず読むことにしました。
+<a href="https://drive.google.com/file/d/0Bylpznm149-gTGRjOFRkWm9PODg/view">kotlin-prior-learning-book.pdf - Google ドライブ</a></p>
+
+<p>Kotlinの歴史から始まり、基本的な文法が書かれていて、ところどころJavaとの比較が書いてありました。</p>
+
+<h2 id="ストップウォッチ">ストップウォッチ</h2>
+
+<p>試しにアプリ作ってみたいなと思い、以下のサイトを写経してみた。
+<a href="https://employment.en-japan.com/engineerhub/entry/2017/06/23/110000">正式採用の「Kotlin」で挑戦！ 初めてのAndroidアプリ開発 〜ストップウォッチを作ってみよう〜 - エンジニアHub｜若手Webエンジニアのキャリアを考える！</a></p>
+
+<p>UIとスクリプトの紐付けはXcodeのほうが直感的で便利だと思いましたが、Android Studioの補完は強くてJetBrains製はやっぱり良いなと思いました。</p>
+
+<h2 id="kotlinスタートブック">Kotlinスタートブック</h2>
+
+<p>ストップウォッチアプリを作成した上で、わからないことが多すぎたので <a href="https://www.amazon.co.jp/Kotlin%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%88%E3%83%96%E3%83%83%E3%82%AF-%E6%96%B0%E3%81%97%E3%81%84Android%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0-%E9%95%B7%E6%BE%A4-%E5%A4%AA%E9%83%8E/dp/4865940391/ref=sr_1_1?ie=UTF8&amp;qid=1524904549&amp;sr=8-1&amp;keywords=kotlin%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%88%E3%83%96%E3%83%83%E3%82%AF">Kotlinスタートブック</a> をかいました。
+とりあえずやっていこうと思います。</p>
+
+    </div>
+    
+      <div class="pagination">
+        <div class="pagination__title">
+          <span class="pagination__title-h">Read other posts</span>
+          <hr />
+        </div>
+        <div class="pagination__buttons">
+          
+            <span class="button previous">
+              <a href="https://ryu955.github.io/posts/2018/06/06/115409/">
+                <span class="button__icon">←</span>
+                <span class="button__text">マウス操作をVimライクにやる</span>
+              </a>
+            </span>
+          
+          
+            <span class="button next">
+              <a href="https://ryu955.github.io/posts/2018/04/06/022647/">
+                <span class="button__text">Unity初心者用サイトまとめ</span>
+                <span class="button__icon">→</span>
+              </a>
+            </span>
+          
+        </div>
+      </div>
+    
+
+    
+
+    </div>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <a href="https://ryu955.github.io/" class="logo" style="text-decoration: none;">
+  
+    <span class="logo__mark"><svg xmlns="http://www.w3.org/2000/svg" class="greater-icon" width="44" height="44" viewBox="0 0 44 44">
+  <polyline fill="none" stroke="#000" stroke-width="2" points="15 8 29.729 22.382 15 35.367"/>
+</svg>
+</span>
+    <span class="logo__text">hello friend</span>
+    <span class="logo__cursor"></span>
+  
+</a>
+
+      <div class="copyright">
+        <span>© 2019 Powered by <a href="http://gohugo.io">Hugo</a></span>
+        <span>Theme created by <a href="https://twitter.com/panr">panr</a></span>
+      </div>
+    
+  </div>
+</footer>
+
+<script src="https://ryu955.github.io/assets/main.js"></script>
+<script src="https://ryu955.github.io/assets/prism.js"></script>
+
+  
+</div>
+
+</body>
+</html>

@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>Lily58ビルドログ :: Ryu955 — nanimo wakaranai</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="description" content="もくじ もくじ はじめに Lily58を選んだ理由 キットの中身 キットの他に買ったもの 購入理由等   制作ログ ダイオード OLED Pro micro と こまいもの キースイッチ 組み立て 書き込み   1ヶ月使った感想 おわりに  はじめに  Lily58を作りました。
+まえまえから自作キーボードには興味があったものの、HHKBでいっかなって思いがあって踏みきれずにいました。
+そんな中、Twitterでいい感じのキーボードが冬コミにだされるという情報を手にいれ、重い腰を上げてキーボードを買うために、年末の寒い中、冬コミに初参加してきました。
+今回はその作成したLily58のビルドログです。
+  Lily58を選んだ理由 レツプリをはじめ、4行のキーボードはキーが足りないのではと思いました。 じゃあ、キーは多ければいいかというとそうではなさそうです。 Ergo dox EZを買おうか悩んでた時期があり、その時Ergo doxのレビューを読み漁ってました。 それらのレビューでは、結局親指キー全部は使わないという意見を結構みました。
+ということで、60キー前後くらいがよさそうだと思いました。 さらに欲を言うと、レツプリやHelixみたいな完全な格子型じゃなくて親指キーあったらいいなぁって思っていました。
+こんな思いがあるなか、Twitterで求める条件を満たしているLily58なるものがあるのを知り、購入に至りました。
+キットの中身  詳しい内容物はビルドガイド参照
+  # キットの他に買ったもの     品名   購入元   値段   購入日   到着日       マグネット式 MicroUSBケーブル   amazon   1299   1/3   1/4     はんだ   amazon   1003   1/3   1/4     静音化リング  amazon   980   1/3   1/4     セメダイン   amazon   618   1/3   1/4     OLED × 2   遊舎工房   1500   1/1   1/3     コンスルー × 4   遊舎工房   880   1/1   1/3     送料   遊舎工房   300   1/1   1/3     キースイッチ silent red × 60   KBDfans   $22."/>
+<meta name="keywords" content=""/>
+<meta name="robots" content="noodp"/>
+<link rel="canonical" href="https://ryu955.github.io/posts/2019/01/30/003541/" />
+
+
+<link rel="stylesheet" href="https://ryu955.github.io/assets/style.css">
+
+
+<link rel="stylesheet" href="https://ryu955.github.io/style.css">
+
+
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://ryu955.github.io/img/apple-touch-icon-144-precomposed.png">
+<link rel="shortcut icon" href="https://ryu955.github.io/img/favicon.png">
+
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Lily58ビルドログ :: Ryu955 — nanimo wakaranai" />
+<meta name="twitter:description" content="もくじ もくじ はじめに Lily58を選んだ理由 キットの中身 キットの他に買ったもの 購入理由等   制作ログ ダイオード OLED Pro micro と こまいもの キースイッチ 組み立て 書き込み   1ヶ月使った感想 おわりに  はじめに  Lily58を作りました。
+まえまえから自作キーボードには興味があったものの、HHKBでいっかなって思いがあって踏みきれずにいました。
+そんな中、Twitterでいい感じのキーボードが冬コミにだされるという情報を手にいれ、重い腰を上げてキーボードを買うために、年末の寒い中、冬コミに初参加してきました。
+今回はその作成したLily58のビルドログです。
+  Lily58を選んだ理由 レツプリをはじめ、4行のキーボードはキーが足りないのではと思いました。 じゃあ、キーは多ければいいかというとそうではなさそうです。 Ergo dox EZを買おうか悩んでた時期があり、その時Ergo doxのレビューを読み漁ってました。 それらのレビューでは、結局親指キー全部は使わないという意見を結構みました。
+ということで、60キー前後くらいがよさそうだと思いました。 さらに欲を言うと、レツプリやHelixみたいな完全な格子型じゃなくて親指キーあったらいいなぁって思っていました。
+こんな思いがあるなか、Twitterで求める条件を満たしているLily58なるものがあるのを知り、購入に至りました。
+キットの中身  詳しい内容物はビルドガイド参照
+  # キットの他に買ったもの     品名   購入元   値段   購入日   到着日       マグネット式 MicroUSBケーブル   amazon   1299   1/3   1/4     はんだ   amazon   1003   1/3   1/4     静音化リング  amazon   980   1/3   1/4     セメダイン   amazon   618   1/3   1/4     OLED × 2   遊舎工房   1500   1/1   1/3     コンスルー × 4   遊舎工房   880   1/1   1/3     送料   遊舎工房   300   1/1   1/3     キースイッチ silent red × 60   KBDfans   $22." />
+<meta name="twitter:site" content="https://ryu955.github.io/" />
+<meta name="twitter:creator" content="" />
+<meta name="twitter:image" content="">
+
+
+<meta property="og:locale" content="en" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Lily58ビルドログ :: Ryu955 — nanimo wakaranai">
+<meta property="og:description" content="もくじ もくじ はじめに Lily58を選んだ理由 キットの中身 キットの他に買ったもの 購入理由等   制作ログ ダイオード OLED Pro micro と こまいもの キースイッチ 組み立て 書き込み   1ヶ月使った感想 おわりに  はじめに  Lily58を作りました。
+まえまえから自作キーボードには興味があったものの、HHKBでいっかなって思いがあって踏みきれずにいました。
+そんな中、Twitterでいい感じのキーボードが冬コミにだされるという情報を手にいれ、重い腰を上げてキーボードを買うために、年末の寒い中、冬コミに初参加してきました。
+今回はその作成したLily58のビルドログです。
+  Lily58を選んだ理由 レツプリをはじめ、4行のキーボードはキーが足りないのではと思いました。 じゃあ、キーは多ければいいかというとそうではなさそうです。 Ergo dox EZを買おうか悩んでた時期があり、その時Ergo doxのレビューを読み漁ってました。 それらのレビューでは、結局親指キー全部は使わないという意見を結構みました。
+ということで、60キー前後くらいがよさそうだと思いました。 さらに欲を言うと、レツプリやHelixみたいな完全な格子型じゃなくて親指キーあったらいいなぁって思っていました。
+こんな思いがあるなか、Twitterで求める条件を満たしているLily58なるものがあるのを知り、購入に至りました。
+キットの中身  詳しい内容物はビルドガイド参照
+  # キットの他に買ったもの     品名   購入元   値段   購入日   到着日       マグネット式 MicroUSBケーブル   amazon   1299   1/3   1/4     はんだ   amazon   1003   1/3   1/4     静音化リング  amazon   980   1/3   1/4     セメダイン   amazon   618   1/3   1/4     OLED × 2   遊舎工房   1500   1/1   1/3     コンスルー × 4   遊舎工房   880   1/1   1/3     送料   遊舎工房   300   1/1   1/3     キースイッチ silent red × 60   KBDfans   $22." />
+<meta property="og:url" content="https://ryu955.github.io/posts/2019/01/30/003541/" />
+<meta property="og:site_name" content="Lily58ビルドログ" />
+<meta property="og:image" content="">
+<meta property="og:image:width" content="2048">
+<meta property="og:image:height" content="1024">
+
+<meta property="article:published_time" content="2019-01-30 00:35:41 &#43;0000 UTC" />
+
+
+
+
+
+
+
+</head>
+<body class="dark-theme">
+<div class="container">
+  <header class="header">
+  <span class="header__inner">
+    <a href="https://ryu955.github.io/" class="logo" style="text-decoration: none;">
+  
+    <span class="logo__mark"><svg xmlns="http://www.w3.org/2000/svg" class="greater-icon" width="44" height="44" viewBox="0 0 44 44">
+  <polyline fill="none" stroke="#000" stroke-width="2" points="15 8 29.729 22.382 15 35.367"/>
+</svg>
+</span>
+    <span class="logo__text">hello friend</span>
+    <span class="logo__cursor"></span>
+  
+</a>
+
+    <span class="header__right">
+      
+        <nav class="menu">
+  <ul class="menu__inner menu__inner--desktop">
+    
+      
+        
+          <li><a href="/about">About</a></li>
+        
+      
+        
+          <li><a href="/tags">Tags</a></li>
+        
+      
+      
+    
+  </ul>
+
+  <ul class="menu__inner menu__inner--mobile">
+    
+      
+        <li><a href="/about">About</a></li>
+      
+    
+      
+        <li><a href="/tags">Tags</a></li>
+      
+    
+  </ul>
+</nav>
+
+        <span class="menu-trigger">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M0 0h24v24H0z" fill="none"/>
+            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+          </svg>
+        </span>
+      
+      <span class="theme-toggle">
+        <svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+</svg>
+
+      </span>
+    </span>
+  </span>
+</header>
+
+
+  <div class="content">
+    
+  <div class="post">
+    <h2 class="post-title"><a href="https://ryu955.github.io/posts/2019/01/30/003541/">Lily58ビルドログ</a></h2>
+    <div class="post-meta">
+      
+        <span class="post-date">
+            2019-01-30
+        </span>
+      
+      
+      
+    </div>
+
+    
+
+    
+
+    <div class="post-content">
+      
+
+<h1 id="もくじ">もくじ</h1>
+
+<ul class="table-of-contents">
+    <li><a href="#もくじ">もくじ</a></li>
+    <li><a href="#はじめに">はじめに</a></li>
+    <li><a href="#Lily58を選んだ理由">Lily58を選んだ理由</a></li>
+    <li><a href="#キットの中身">キットの中身</a></li>
+    <li><a href="#キットの他に買ったもの">キットの他に買ったもの</a><ul>
+            <li><a href="#購入理由等">購入理由等</a></li>
+        </ul>
+    </li>
+    <li><a href="#制作ログ">制作ログ</a><ul>
+            <li><a href="#ダイオード">ダイオード</a></li>
+            <li><a href="#OLED">OLED</a></li>
+            <li><a href="#Pro-micro-と-こまいもの">Pro micro と こまいもの</a></li>
+            <li><a href="#キースイッチ">キースイッチ</a></li>
+            <li><a href="#組み立て">組み立て</a></li>
+            <li><a href="#書き込み">書き込み</a></li>
+        </ul>
+    </li>
+    <li><a href="#1ヶ月使った感想">1ヶ月使った感想</a></li>
+    <li><a href="#おわりに">おわりに</a></li>
+</ul>
+
+<h1 id="はじめに">はじめに</h1>
+
+
+  <figure class="left" >
+    <img src="/images/2019/01/30/003541/20190130001745.jpg"   />
+    
+  </figure>
+
+
+
+<p>Lily58を作りました。</p>
+
+<p>まえまえから自作キーボードには興味があったものの、HHKBでいっかなって思いがあって踏みきれずにいました。</p>
+
+<p>そんな中、Twitterでいい感じのキーボードが冬コミにだされるという情報を手にいれ、重い腰を上げてキーボードを買うために、年末の寒い中、冬コミに初参加してきました。</p>
+
+<p>今回はその作成したLily58のビルドログです。</p>
+
+
+  <figure class="left" >
+    <img src="/images/2019/01/30/003541/20190107152609.jpg"   />
+    
+  </figure>
+
+
+
+
+  <figure class="left" >
+    <img src="/images/2019/01/30/003541/20190108231038.jpg"   />
+    
+  </figure>
+
+
+
+<h1 id="lily58を選んだ理由">Lily58を選んだ理由</h1>
+
+<p>レツプリをはじめ、4行のキーボードはキーが足りないのではと思いました。
+じゃあ、キーは多ければいいかというとそうではなさそうです。
+Ergo dox EZを買おうか悩んでた時期があり、その時Ergo doxのレビューを読み漁ってました。
+それらのレビューでは、結局親指キー全部は使わないという意見を結構みました。</p>
+
+<p>ということで、60キー前後くらいがよさそうだと思いました。
+さらに欲を言うと、レツプリやHelixみたいな完全な格子型じゃなくて親指キーあったらいいなぁって思っていました。</p>
+
+<p>こんな思いがあるなか、Twitterで求める条件を満たしているLily58なるものがあるのを知り、購入に至りました。</p>
+
+<h1 id="キットの中身">キットの中身</h1>
+
+
+  <figure class="left" >
+    <img src="/images/2019/01/30/003541/20190107153808.jpg"   />
+    
+  </figure>
+
+
+
+<p>詳しい内容物はビルドガイド参照</p>
+
+<div class="github-card" data-user="kata0510/Lily58/blob/master/doc" data-repo="buildguide_jp.md#%E5%BF%85%E8%A6%81%E9%83%A8%E5%93%81" data-width="400" data-height="" data-theme="default"></div>
+<script src="https://cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
+
+
+# キットの他に買ったもの
+
+<table>
+<thead>
+<tr>
+<th>  品名 </th>
+<th> 購入元 </th>
+<th> 値段 </th>
+<th> 購入日 </th>
+<th> 到着日 </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>  <a href="https://www.amazon.co.jp/gp/product/B074DG4XSZ/ref=oh_aui_detailpage_o01_s00?ie=UTF8&amp;psc=1">マグネット式 MicroUSBケーブル</a> </td>
+<td> amazon </td>
+<td> 1299 </td>
+<td> 1/3 </td>
+<td> 1/4 </td>
+</tr>
+<tr>
+<td>  <a href="https://www.amazon.co.jp/gp/product/B001PR1L28/ref=oh_aui_detailpage_o00_s00?ie=UTF8&amp;psc=1">はんだ</a> </td>
+<td> amazon </td>
+<td> 1003 </td>
+<td> 1/3 </td>
+<td> 1/4 </td>
+</tr>
+<tr>
+<td>  <a href="https://www.amazon.co.jp/gp/product/B01H6Q53UC/ref=oh_aui_detailpage_o01_s00?ie=UTF8&amp;psc=1">静音化リング</a></td>
+<td> amazon </td>
+<td> 980 </td>
+<td> 1/3 </td>
+<td> 1/4 </td>
+</tr>
+<tr>
+<td>  <a href="https://www.amazon.co.jp/gp/product/B000TGAR3K/ref=oh_aui_detailpage_o00_s00?ie=UTF8&amp;psc=1">セメダイン</a> </td>
+<td> amazon </td>
+<td> 618 </td>
+<td> 1/3 </td>
+<td> 1/4 </td>
+</tr>
+<tr>
+<td>  <a href="https://yushakobo.jp/shop/oled/">OLED × 2</a> </td>
+<td> 遊舎工房 </td>
+<td> 1500 </td>
+<td> 1/1 </td>
+<td> 1/3 </td>
+</tr>
+<tr>
+<td>  <a href="https://yushakobo.jp/shop/a01mc-00/">コンスルー × 4</a> </td>
+<td> 遊舎工房 </td>
+<td> 880 </td>
+<td> 1/1 </td>
+<td> 1/3 </td>
+</tr>
+<tr>
+<td>  送料 </td>
+<td> 遊舎工房 </td>
+<td> 300 </td>
+<td> 1/1 </td>
+<td> 1/3 </td>
+</tr>
+<tr>
+<td>  <a href="https://kbdfans.cn/products/pre-orderkbdfans-exclusive-gateron-silent-switch-red-brown-blak">キースイッチ silent red × 60</a> </td>
+<td> KBDfans </td>
+<td> $22.8 </td>
+<td> 1/1 </td>
+<td> 1/12 </td>
+</tr>
+<tr>
+<td>  <a href="https://kbdfans.cn/products/kbdfans-dsa-1-25u-1-5u-2u-dsa?variant=21684535459888">キーキャップ1.5U × 2</a> </td>
+<td> KBDfans </td>
+<td> $2.6 </td>
+<td> 1/1 </td>
+<td> 1/12 </td>
+</tr>
+<tr>
+<td>  送料 </td>
+<td> KBDfans </td>
+<td> $5 </td>
+<td> 1/1 </td>
+<td> 1/12 </td>
+</tr>
+<tr>
+<td>  <a href="https://www.aliexpress.com/snapshot/0.html?spm=a2g0s.9042647.0.0.31144c4d7H6Zo7&amp;orderId=97396125286125&amp;productId=32830177884">キーキャップ1U × 68</a> </td>
+<td> AliExpress </td>
+<td> 1552 </td>
+<td> 1/1 </td>
+<td> 1/12 </td>
+</tr>
+<tr>
+<td>  合計 </td>
+<td>  </td>
+<td> 11532 </td>
+<td>  </td>
+<td>  </td>
+</tr>
+</tbody>
+</table>
+
+
+KBDfansは日本円で3480円でした。
+
+キットの他に買ったものの合計は11,532円でした。
+
+キット含めて、22,532円使ったことになります。
+
+費用を抑えたければ、OLED、コンスルー、セメダイン、マグネットUSBケーブルといった、任意のものを買わなければ2万円は切りそうですね。
+
+## 購入理由等
+
+マグネット式USBケーブルはモゲmicroが怖くて買いました。USBケーブルはデータ通信可能じゃないとだめらしいです。
+
+はんだのφは0.6 から 0.8 が推奨らしいです。はんだ初心者なので、細い方が失敗しにくいかなって思って0.6にしてみました。
+
+静音化リングが入った実機をコミケで触らしてもらった時の打感が良かったので、今回試しに買ってみました。
+
+セメダインもモゲmicroが怖くて買いました。私用でも使うので大きいのを買いました。実際に使ったのは少量なので、小さい方でも問題ないです。
+
+OLEDはかっこいいので買いました。
+
+コンスルーはOLED買うし、どうせ送料かかるなら買っておくかくらいのモチベで買いました。あとあと、コンスルーにしたおかげで命拾いしたので、880円とちょっと高いですが、買っておいてよかったです。
+
+キースイッチは研究室で使う予定なので赤軸にしました。
+
+キーキャップは親指の所のキーの推奨が1.5Uだったので、2こだけKBDfansで買いました。
+1Uでも対応してるとのことですが、KBDfansでキースイッチ買うし、$2.6くらいだったので買いました。
+
+1Uのキーキャップはサイトに登録したらクーポンが貰えたので、ちょっとだけ安く買えました:)
+
+# 制作ログ
+
+作業風景、過程を載せていきます。
+制作方法はビルドガイド参照。
+
+## ダイオード
+
+はんだ付けnoobの自分でも簡単にできました。
+
+<figure class="figure-image figure-image-fotolife" title="マスキングテープで裏をがーっと">
+  <figure class="left" >
+    <img src="/images/2019/01/30/003541/20190129235012.jpg"   />
+    
+  </figure>
+
+<figcaption>マスキングテープで裏をがーっと</figcaption></figure>
+
+
+  <figure class="left" >
+    <img src="/images/2019/01/30/003541/20190129235107.jpg"   />
+    
+  </figure>
+
+
+
+## OLED
+
+Lily58のビルドガイドには書いてなかったのですが、OLEDモジュールを使用するときはPCBにジャンパが必要らしいです(Helixのビルドガイド参照)
+
+自分はこれを知らずに、組み終えてしまいました。
+しかも、ジャンパする場所がPro microの真下でした。
+
+幸い、pro microにコンスルーを使っていたため、引き抜いてなんとかなりましたが、コンスルーを買ってなくて、OLEDを使おうと思う人は気をつけてください。
+ちなみに自分はPro microを引き抜いた時に、勢いあまってコンスルーの足が折れ曲りました。
+
+
+<div class="github-card" data-user="MakotoKurauchi/helix/blob/master/Doc" data-repo="buildguide_jp.md#pcb%E3%81%AE%E6%BA%96%E5%82%99" data-width="400" data-height="" data-theme="default"></div>
+<script src="https://cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
+
+
+## Pro micro と こまいもの
+
+
+  <figure class="left" >
+    <img src="/images/2019/01/30/003541/20190129235954.jpg"   />
+    
+  </figure>
+
+
+
+## キースイッチ
+
+まず、アクリルケースのカバーを剥します。
+アクリルケースのカバーを剥す作業が制作で一番楽しかったまであります。
+
+スイッチのはんだ自体もそれほど難しくありませんでした。
+
+
+  <figure class="left" >
+    <img src="/images/2019/01/30/003541/20190130000330.jpg"   />
+    
+  </figure>
+
+
+
+
+  <figure class="left" >
+    <img src="/images/2019/01/30/003541/20190130000428.jpg"   />
+    
+  </figure>
+
+
+
+<figure class="figure-image figure-image-fotolife" title="ケースにスイッチをはめる">
+  <figure class="left" >
+    <img src="/images/2019/01/30/003541/20190130000529.jpg"   />
+    
+  </figure>
+
+<figcaption>ケースにスイッチをはめる</figcaption></figure>
+
+<figure class="figure-image figure-image-fotolife" title="ケースごとスイッチをはめこんではんだ付け">
+  <figure class="left" >
+    <img src="/images/2019/01/30/003541/20190130000604.jpg"   />
+    
+  </figure>
+
+<figcaption>ケースごとスイッチをはめこんではんだ付け</figcaption></figure>
+
+## 組み立て
+
+あとは組み立てて、キーキャップをはめて本体は完成。
+
+僕はゴム足をいつのまにかになくしてしまい、amazonで500円くらいのやつを買いたすことになったので気をつけてください。
+
+<figure class="figure-image figure-image-fotolife" title="ねじは2種類あり、平べったい方がPro microのカバーに使うやつ">
+  <figure class="left" >
+    <img src="/images/2019/01/30/003541/20190130001023.jpg"   />
+    
+  </figure>
+
+<figcaption>ねじは2種類あり、平べったい方がPro microのカバーに使うやつ</figcaption></figure>
+
+
+  <figure class="left" >
+    <img src="/images/2019/01/30/003541/20190130001137.jpg"   />
+    
+  </figure>
+
+
+
+## 書き込み
+
+書き込みのためのインストールは結構時間がかかるので、はんだ作業中にはしらせておいた方がよさそうです。
+
+適当にキーマップを変えてビルドしたら完成。
+
+[QMK Firmware](https://docs.qmk.fm/#/getting_started_build_tools)
+
+# 1ヶ月使った感想
+
+めっちゃ良いです。
+Lily58に乗り変えて3時間くらいはタイピングが満足にできませんでした。
+ですが、1日触れば配列は覚えられて、3週間使えば元のタイピング速度に戻りました。
+
+下に付いている親指キーの3つの配列だけどうも覚えられなかったので、up/downは別の色のキーにしました。
+このキーは遊舎工房の実店舗で買いました。
+
+磁石usbは磁力が強すぎて、結局根本から抜けるのであまり意味はありませんでした。
+モゲマイクロ対策をする人は普通のやつでもいいのかなと思います。
+
+最近は無印のポーチがぴったりで持ち運んで使っています。
+
+[ポリエステル吊して使える洗面用具ケースグレー・約１６×１９×６ｃｍ 通販 | 無印良品](https://www.muji.net/store/cmdty/detail/4549738743750?searchno=3§ionCode=S000380201)
+
+
+  <figure class="left" >
+    <img src="/images/2019/01/30/003541/20190130002112.jpg"   />
+    
+  </figure>
+
+
+
+リストレストはboothのきつねこやさんで買ったものを使っています。おすすめ。
+
+[革100%リストレスト - きつねこや - BOOTH](https://kituneko-shop.booth.pm/items/918271)
+
+# おわりに
+
+完成したあと、2箇所タイピングしても反応がないことがあるなーって思ったら、その2箇所のキースイッチのはんだをしわすれていたとこと以外は詰らずにできました。
+ビルドログさえちゃんと読んでおけば、簡単に作れる良いキットだと思います。<a href="#f-7433fcb0" name="fn-7433fcb0" title="この記事は8割 HHKB,2割 Lily58で書かれています。">*1</a>
+<div class="footnote">
+<a href="#fn-7433fcb0" name="f-7433fcb0" class="footnote-number">*1</a><span class="footnote-delimiter">:</span><span class="footnote-text">この記事は8割 HHKB,2割 Lily58で書かれています。</span>
+</div>
+
+    </div>
+    
+      <div class="pagination">
+        <div class="pagination__title">
+          <span class="pagination__title-h">Read other posts</span>
+          <hr />
+        </div>
+        <div class="pagination__buttons">
+          
+            <span class="button previous">
+              <a href="https://ryu955.github.io/posts/2019/02/19/130223/">
+                <span class="button__icon">←</span>
+                <span class="button__text">steam vr plugin 2.2.0でtrackerの座標を取る</span>
+              </a>
+            </span>
+          
+          
+            <span class="button next">
+              <a href="https://ryu955.github.io/posts/2018/12/10/233525/">
+                <span class="button__text">Amazon買ったもの</span>
+                <span class="button__icon">→</span>
+              </a>
+            </span>
+          
+        </div>
+      </div>
+    
+
+    
+
+    </div>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <a href="https://ryu955.github.io/" class="logo" style="text-decoration: none;">
+  
+    <span class="logo__mark"><svg xmlns="http://www.w3.org/2000/svg" class="greater-icon" width="44" height="44" viewBox="0 0 44 44">
+  <polyline fill="none" stroke="#000" stroke-width="2" points="15 8 29.729 22.382 15 35.367"/>
+</svg>
+</span>
+    <span class="logo__text">hello friend</span>
+    <span class="logo__cursor"></span>
+  
+</a>
+
+      <div class="copyright">
+        <span>© 2019 Powered by <a href="http://gohugo.io">Hugo</a></span>
+        <span>Theme created by <a href="https://twitter.com/panr">panr</a></span>
+      </div>
+    
+  </div>
+</footer>
+
+<script src="https://ryu955.github.io/assets/main.js"></script>
+<script src="https://ryu955.github.io/assets/prism.js"></script>
+
+  
+</div>
+
+</body>
+</html>

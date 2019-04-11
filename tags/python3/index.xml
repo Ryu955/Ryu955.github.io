@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Python3 on Ryu955</title>
+    <link>https://ryu955.github.io/tags/python3/</link>
+    <description>Recent content in Python3 on Ryu955</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>jp</language>
+    <lastBuildDate>Mon, 04 Sep 2017 02:39:13 +0000</lastBuildDate>
+    
+	<atom:link href="https://ryu955.github.io/tags/python3/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>大学のバスの時刻表をスクレイピングする</title>
+      <link>https://ryu955.github.io/posts/2017/09/04/023913/</link>
+      <pubDate>Mon, 04 Sep 2017 02:39:13 +0000</pubDate>
+      
+      <guid>https://ryu955.github.io/posts/2017/09/04/023913/</guid>
+      <description>はじめに いま趣味で作ってるもので大学のバスの時刻表のデータがほしかったからスクレイピングした
+スクレイピング対象  東京工科大学のバスサイト  どんなデータが欲しいのか  キャンパス発と駅着発とキャンパス着がカンマ区切りになったcsvファイル  扱う側でsplitなりで整形しやすいように   八王子の民なのでみなみ野のデータはなし  環境  macOS Sierra 10.12.2 Python 3.5.2 BeautifulSoupを使った  BeautifulSoupをインストール $ pip install beautifulsoup4  試行錯誤 ソースコード gist.github.com
+出力 出力されたBusTimeTable.csvの上から10行目まで
+gist.github.com
+問題点  複数行に渡ってるけど1行にしたい 備考欄がいらない シャトル運行の時間が ～,～,～,シャトル運行（約3～5分間隔) となっている 4列目に空白文字がありカンマで終わっていない  07:18,07:30,07:48,(空白)    改善したもの ソースコード gist.github.com
+出力 出力を一行にしたので途中まで
+gist.github.com
+変更点 1つ目  16行目に以下を追加  writer = csv.writer(csvFile,lineterminator=&amp;amp;#39;,&amp;amp;#39;)   lineterminatorは各行の終端する際に用いられる文字列で，未宣言時のデフォルトだと\r\nになる lineterminatorにカンマをいれることで改行しないで一行のcsvファイルになる  2つ目  21行目から32行目を以下に変更  for cell in row.</description>
+    </item>
+    
+  </channel>
+</rss>

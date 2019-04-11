@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>大学のバスの時刻表をスクレイピングする :: Ryu955 — nanimo wakaranai</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="description" content="はじめに いま趣味で作ってるもので大学のバスの時刻表のデータがほしかったからスクレイピングした
+スクレイピング対象  東京工科大学のバスサイト  どんなデータが欲しいのか  キャンパス発と駅着発とキャンパス着がカンマ区切りになったcsvファイル  扱う側でsplitなりで整形しやすいように   八王子の民なのでみなみ野のデータはなし  環境  macOS Sierra 10.12.2 Python 3.5.2 BeautifulSoupを使った  BeautifulSoupをインストール $ pip install beautifulsoup4  試行錯誤 ソースコード gist.github.com
+出力 出力されたBusTimeTable.csvの上から10行目まで
+gist.github.com
+問題点  複数行に渡ってるけど1行にしたい 備考欄がいらない シャトル運行の時間が ～,～,～,シャトル運行（約3～5分間隔) となっている 4列目に空白文字がありカンマで終わっていない  07:18,07:30,07:48,(空白)    改善したもの ソースコード gist.github.com
+出力 出力を一行にしたので途中まで
+gist.github.com
+変更点 1つ目  16行目に以下を追加  writer = csv.writer(csvFile,lineterminator=&amp;amp;#39;,&amp;amp;#39;)   lineterminatorは各行の終端する際に用いられる文字列で，未宣言時のデフォルトだと\r\nになる lineterminatorにカンマをいれることで改行しないで一行のcsvファイルになる  2つ目  21行目から32行目を以下に変更  for cell in row."/>
+<meta name="keywords" content=""/>
+<meta name="robots" content="noodp"/>
+<link rel="canonical" href="https://ryu955.github.io/posts/2017/09/04/023913/" />
+
+
+<link rel="stylesheet" href="https://ryu955.github.io/assets/style.css">
+
+
+<link rel="stylesheet" href="https://ryu955.github.io/style.css">
+
+
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://ryu955.github.io/img/apple-touch-icon-144-precomposed.png">
+<link rel="shortcut icon" href="https://ryu955.github.io/img/favicon.png">
+
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="大学のバスの時刻表をスクレイピングする :: Ryu955 — nanimo wakaranai" />
+<meta name="twitter:description" content="はじめに いま趣味で作ってるもので大学のバスの時刻表のデータがほしかったからスクレイピングした
+スクレイピング対象  東京工科大学のバスサイト  どんなデータが欲しいのか  キャンパス発と駅着発とキャンパス着がカンマ区切りになったcsvファイル  扱う側でsplitなりで整形しやすいように   八王子の民なのでみなみ野のデータはなし  環境  macOS Sierra 10.12.2 Python 3.5.2 BeautifulSoupを使った  BeautifulSoupをインストール $ pip install beautifulsoup4  試行錯誤 ソースコード gist.github.com
+出力 出力されたBusTimeTable.csvの上から10行目まで
+gist.github.com
+問題点  複数行に渡ってるけど1行にしたい 備考欄がいらない シャトル運行の時間が ～,～,～,シャトル運行（約3～5分間隔) となっている 4列目に空白文字がありカンマで終わっていない  07:18,07:30,07:48,(空白)    改善したもの ソースコード gist.github.com
+出力 出力を一行にしたので途中まで
+gist.github.com
+変更点 1つ目  16行目に以下を追加  writer = csv.writer(csvFile,lineterminator=&amp;amp;#39;,&amp;amp;#39;)   lineterminatorは各行の終端する際に用いられる文字列で，未宣言時のデフォルトだと\r\nになる lineterminatorにカンマをいれることで改行しないで一行のcsvファイルになる  2つ目  21行目から32行目を以下に変更  for cell in row." />
+<meta name="twitter:site" content="https://ryu955.github.io/" />
+<meta name="twitter:creator" content="" />
+<meta name="twitter:image" content="">
+
+
+<meta property="og:locale" content="en" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="大学のバスの時刻表をスクレイピングする :: Ryu955 — nanimo wakaranai">
+<meta property="og:description" content="はじめに いま趣味で作ってるもので大学のバスの時刻表のデータがほしかったからスクレイピングした
+スクレイピング対象  東京工科大学のバスサイト  どんなデータが欲しいのか  キャンパス発と駅着発とキャンパス着がカンマ区切りになったcsvファイル  扱う側でsplitなりで整形しやすいように   八王子の民なのでみなみ野のデータはなし  環境  macOS Sierra 10.12.2 Python 3.5.2 BeautifulSoupを使った  BeautifulSoupをインストール $ pip install beautifulsoup4  試行錯誤 ソースコード gist.github.com
+出力 出力されたBusTimeTable.csvの上から10行目まで
+gist.github.com
+問題点  複数行に渡ってるけど1行にしたい 備考欄がいらない シャトル運行の時間が ～,～,～,シャトル運行（約3～5分間隔) となっている 4列目に空白文字がありカンマで終わっていない  07:18,07:30,07:48,(空白)    改善したもの ソースコード gist.github.com
+出力 出力を一行にしたので途中まで
+gist.github.com
+変更点 1つ目  16行目に以下を追加  writer = csv.writer(csvFile,lineterminator=&amp;amp;#39;,&amp;amp;#39;)   lineterminatorは各行の終端する際に用いられる文字列で，未宣言時のデフォルトだと\r\nになる lineterminatorにカンマをいれることで改行しないで一行のcsvファイルになる  2つ目  21行目から32行目を以下に変更  for cell in row." />
+<meta property="og:url" content="https://ryu955.github.io/posts/2017/09/04/023913/" />
+<meta property="og:site_name" content="大学のバスの時刻表をスクレイピングする" />
+<meta property="og:image" content="">
+<meta property="og:image:width" content="2048">
+<meta property="og:image:height" content="1024">
+
+<meta property="article:published_time" content="2017-09-04 02:39:13 &#43;0000 UTC" />
+
+
+
+
+
+
+
+</head>
+<body class="dark-theme">
+<div class="container">
+  <header class="header">
+  <span class="header__inner">
+    <a href="https://ryu955.github.io/" class="logo" style="text-decoration: none;">
+  
+    <span class="logo__mark"><svg xmlns="http://www.w3.org/2000/svg" class="greater-icon" width="44" height="44" viewBox="0 0 44 44">
+  <polyline fill="none" stroke="#000" stroke-width="2" points="15 8 29.729 22.382 15 35.367"/>
+</svg>
+</span>
+    <span class="logo__text">hello friend</span>
+    <span class="logo__cursor"></span>
+  
+</a>
+
+    <span class="header__right">
+      
+        <nav class="menu">
+  <ul class="menu__inner menu__inner--desktop">
+    
+      
+        
+          <li><a href="/about">About</a></li>
+        
+      
+        
+          <li><a href="/tags">Tags</a></li>
+        
+      
+      
+    
+  </ul>
+
+  <ul class="menu__inner menu__inner--mobile">
+    
+      
+        <li><a href="/about">About</a></li>
+      
+    
+      
+        <li><a href="/tags">Tags</a></li>
+      
+    
+  </ul>
+</nav>
+
+        <span class="menu-trigger">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M0 0h24v24H0z" fill="none"/>
+            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+          </svg>
+        </span>
+      
+      <span class="theme-toggle">
+        <svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+</svg>
+
+      </span>
+    </span>
+  </span>
+</header>
+
+
+  <div class="content">
+    
+  <div class="post">
+    <h2 class="post-title"><a href="https://ryu955.github.io/posts/2017/09/04/023913/">大学のバスの時刻表をスクレイピングする</a></h2>
+    <div class="post-meta">
+      
+        <span class="post-date">
+            2017-09-04
+        </span>
+      
+      
+      
+    </div>
+
+    
+      <span class="post-tags">
+        
+          #<a href="https://ryu955.github.io/tags/python3">Python3</a>&nbsp;
+        
+      </span>
+    
+
+    
+
+    <div class="post-content">
+      
+
+<h2 id="はじめに">はじめに</h2>
+
+<p>いま趣味で作ってるもので大学のバスの時刻表のデータがほしかったからスクレイピングした</p>
+
+<h2 id="スクレイピング対象">スクレイピング対象</h2>
+
+<ul>
+<li><a href="http://www.teu.ac.jp/campus/access/2017_kihon-a_bus.html">東京工科大学のバスサイト</a></li>
+</ul>
+
+<h2 id="どんなデータが欲しいのか">どんなデータが欲しいのか</h2>
+
+<ul>
+<li>キャンパス発と駅着発とキャンパス着がカンマ区切りになったcsvファイル
+
+<ul>
+<li>扱う側でsplitなりで整形しやすいように</li>
+</ul>
+</li>
+<li>八王子の民なのでみなみ野のデータはなし</li>
+</ul>
+
+<h2 id="環境">環境</h2>
+
+<ul>
+<li>macOS Sierra 10.12.2</li>
+<li>Python 3.5.2</li>
+<li>BeautifulSoupを使った</li>
+</ul>
+
+<h2 id="beautifulsoupをインストール">BeautifulSoupをインストール</h2>
+
+<pre><code>$ pip install beautifulsoup4
+</code></pre>
+
+<h2 id="試行錯誤">試行錯誤</h2>
+
+<h3 id="ソースコード">ソースコード</h3>
+
+<p><script src="https://gist.github.com/Ryu955/a7330bc760f823fabe4aa1c7b6191b3b.js"> </script><cite class="hatena-citation"><a href="https://gist.github.com/Ryu955/a7330bc760f823fabe4aa1c7b6191b3b">gist.github.com</a></cite></p>
+
+<h3 id="出力">出力</h3>
+
+<p>出力されたBusTimeTable.csvの上から10行目まで</p>
+
+<p><script src="https://gist.github.com/Ryu955/5d786a0bdd2eee7f025267626f4b63d0.js"> </script><cite class="hatena-citation"><a href="https://gist.github.com/Ryu955/5d786a0bdd2eee7f025267626f4b63d0">gist.github.com</a></cite></p>
+
+<h3 id="問題点">問題点</h3>
+
+<ul>
+<li>複数行に渡ってるけど1行にしたい</li>
+<li>備考欄がいらない</li>
+<li>シャトル運行の時間が <code>～,～,～,シャトル運行（約3～5分間隔)</code> となっている</li>
+<li>4列目に空白文字がありカンマで終わっていない
+
+<ul>
+<li><code>07:18,07:30,07:48,(空白)</code></li>
+</ul>
+</li>
+</ul>
+
+<h2 id="改善したもの">改善したもの</h2>
+
+<h3 id="ソースコード-1">ソースコード</h3>
+
+<p><script src="https://gist.github.com/Ryu955/b633195397eea6dae79246ec926eea8d.js"> </script><cite class="hatena-citation"><a href="https://gist.github.com/Ryu955/b633195397eea6dae79246ec926eea8d">gist.github.com</a></cite></p>
+
+<h3 id="出力-1">出力</h3>
+
+<p>出力を一行にしたので途中まで</p>
+
+<p><script src="https://gist.github.com/Ryu955/5cddb5a56efb823f7d77838488329504.js"> </script><cite class="hatena-citation"><a href="https://gist.github.com/Ryu955/5cddb5a56efb823f7d77838488329504">gist.github.com</a></cite></p>
+
+<h2 id="変更点">変更点</h2>
+
+<h3 id="1つ目">1つ目</h3>
+
+<ul>
+<li>16行目に以下を追加</li>
+</ul>
+
+<pre><code>writer = csv.writer(csvFile,lineterminator=&amp;#39;,&amp;#39;) 
+</code></pre>
+
+<ul>
+<li>lineterminatorは各行の終端する際に用いられる文字列で，未宣言時のデフォルトだと\r\nになる</li>
+<li>lineterminatorにカンマをいれることで改行しないで一行のcsvファイルになる</li>
+</ul>
+
+<h3 id="2つ目">2つ目</h3>
+
+<ul>
+<li>21行目から32行目を以下に変更</li>
+</ul>
+
+<pre><code class="language-python">for cell in row.findAll([&amp;#39;td&amp;#39;, &amp;#39;th&amp;#39;]):
+    text = cell.get_text()
+    if(text == &amp;#39;～&amp;#39;):
+        pass
+    elif(text == &amp;#39;&amp;#39;):
+        pass
+    elif(text == &amp;#39;備　　考&amp;#39;):
+        pass
+    else:
+        csvRow.append(text)
+        print(text)
+writer.writerow(csvRow) 
+
+</code></pre>
+
+<ul>
+<li>if文の分岐でtextの中身がいらないものだったら <code>pass</code> でスキップする</li>
+</ul>
+
+<h2 id="おわりに">おわりに</h2>
+
+<p>とりあえず想定していたcsvファイルを作ることはできたけど，現状のキャンパス発と駅着発とキャンパス着同じファイルにして使うプログラムでcsvを加工するのと，pythonでそれぞれを別のファイルにするのとどっちのが楽になるのか</p>
+
+    </div>
+    
+      <div class="pagination">
+        <div class="pagination__title">
+          <span class="pagination__title-h">Read other posts</span>
+          <hr />
+        </div>
+        <div class="pagination__buttons">
+          
+            <span class="button previous">
+              <a href="https://ryu955.github.io/posts/2017/09/06/052707/">
+                <span class="button__icon">←</span>
+                <span class="button__text">ActionSheetPickerを使って時間を選択する</span>
+              </a>
+            </span>
+          
+          
+            <span class="button next">
+              <a href="https://ryu955.github.io/posts/2017/09/03/010018/">
+                <span class="button__text">golang.tokyo #8 に行ってきた</span>
+                <span class="button__icon">→</span>
+              </a>
+            </span>
+          
+        </div>
+      </div>
+    
+
+    
+
+    </div>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <a href="https://ryu955.github.io/" class="logo" style="text-decoration: none;">
+  
+    <span class="logo__mark"><svg xmlns="http://www.w3.org/2000/svg" class="greater-icon" width="44" height="44" viewBox="0 0 44 44">
+  <polyline fill="none" stroke="#000" stroke-width="2" points="15 8 29.729 22.382 15 35.367"/>
+</svg>
+</span>
+    <span class="logo__text">hello friend</span>
+    <span class="logo__cursor"></span>
+  
+</a>
+
+      <div class="copyright">
+        <span>© 2019 Powered by <a href="http://gohugo.io">Hugo</a></span>
+        <span>Theme created by <a href="https://twitter.com/panr">panr</a></span>
+      </div>
+    
+  </div>
+</footer>
+
+<script src="https://ryu955.github.io/assets/main.js"></script>
+<script src="https://ryu955.github.io/assets/prism.js"></script>
+
+  
+</div>
+
+</body>
+</html>

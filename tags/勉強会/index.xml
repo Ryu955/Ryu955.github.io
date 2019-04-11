@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>勉強会 on Ryu955</title>
+    <link>https://ryu955.github.io/tags/%E5%8B%89%E5%BC%B7%E4%BC%9A/</link>
+    <description>Recent content in 勉強会 on Ryu955</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>jp</language>
+    <lastBuildDate>Sun, 03 Sep 2017 01:00:18 +0000</lastBuildDate>
+    
+	<atom:link href="https://ryu955.github.io/tags/%E5%8B%89%E5%BC%B7%E4%BC%9A/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>golang.tokyo #8 に行ってきた</title>
+      <link>https://ryu955.github.io/posts/2017/09/03/010018/</link>
+      <pubDate>Sun, 03 Sep 2017 01:00:18 +0000</pubDate>
+      
+      <guid>https://ryu955.github.io/posts/2017/09/03/010018/</guid>
+      <description> はじめに  golang.tokyo #8に行ってきました  golang.tokyo #8 - connpass   ちなみにGo自体はA Tour of Goをやって，スクレイピングをやったくらいしか触ったことないです 開催場所のDMM.comの中は森でした  セッション 一人目  一人目の登壇者の星一さんはGoで作成した2Dゲームライブラリebitenについて発表されていました  発表資料 ebitenとは   普段Unityでゲーム開発をしてるから，こういったゲームエンジンがどういう風に作られているかという話が面白かった とりあえず，ebitenのwikiにあったTutorialsをやってみました 何かしらのGoの学習ついでになにかゲームをつくって見ようと思います  二人目  二人目の登壇者はzcheeさんは個人でつくっているGoのプロダクトについて発表されていました  発表資料      個人で作っているgoのプロダクト by zchee編  from Koichi Shiraishi 
+ 自分が不満を持ったことは自分で解決させるというのは大切なことだと思いました  感想  Go自体の知識はほぼない状態でしたが，Goにかぎらず様々なことに通じるセクションだったため面白かったです  </description>
+    </item>
+    
+    <item>
+      <title>VR Tech Tokyo#6に行ってきた</title>
+      <link>https://ryu955.github.io/posts/2017/03/22/173015/</link>
+      <pubDate>Wed, 22 Mar 2017 17:30:15 +0000</pubDate>
+      
+      <guid>https://ryu955.github.io/posts/2017/03/22/173015/</guid>
+      <description>（終了しました）VR Tech Tokyo #6 @ Microsoft - connpass
+connpassで面白そうな勉強会ないか探してたら面白そうなイベントを見つけたので行ってきた
+VR，AR，MRに興味合ったし，バイトでARに関係する開発やってるから惹かれた．
+Windows Mixed Realityについての発表だったり，VRゲームのゲームデザインについての発表だったりと様々な内容があって面白かった．
+個人的に一番すごいなって思ったのがVoxelKeiさんの「日本列島VRとHoleLenz」の中にあったHoleLenz Gateだった．
+ヒェッ…HoloLensアプリ「HoleLenz Gate」が高所恐怖症をかき立てる｜ギズモード・ジャパン
+もともとSFとかが好きなので近未来感があって面白いなって思った．
+発表も面白かったけど体験会で，VR音ゲーのAIR TONEを体験したりホロレンズを初めて触ったりと楽しかった．
+#7も行けたら行きたい</description>
+    </item>
+    
+  </channel>
+</rss>

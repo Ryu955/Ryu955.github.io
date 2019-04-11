@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Unity on Ryu955</title>
+    <link>https://ryu955.github.io/tags/unity/</link>
+    <description>Recent content in Unity on Ryu955</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>jp</language>
+    <lastBuildDate>Fri, 30 Mar 2018 01:55:16 +0000</lastBuildDate>
+    
+	<atom:link href="https://ryu955.github.io/tags/unity/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title> LineRendererでGameObjectの周りを線を囲いたい</title>
+      <link>https://ryu955.github.io/posts/2018/03/30/015516/</link>
+      <pubDate>Fri, 30 Mar 2018 01:55:16 +0000</pubDate>
+      
+      <guid>https://ryu955.github.io/posts/2018/03/30/015516/</guid>
+      <description> やりたいこと ① 複数のマーカー(GameObject)の間を線で囲いたい
+ ② マーカーが増えたときも、それに合わせて線で囲ってほしい
+ 環境    名前  バージョン      macOS Sieera 10.12.6    Unity  2017.1.0f3 Personal     線を引く Unityで線を引く方法はいくつかあるが*1、今回はこの中で扱いが楽そうなLineRendererを使うことにした。
+LineRendererは LineRenderer.numPositions 頂点の数を設定し、LineRenderer.SetPosition(int,Vecter3) 描画したい頂点の順番と座標を引数に線を描画することができる。
+動的に線を描画 コードはこんな感じ。
+foreachでリストを回してるだけ。
+ 見た目はこんな感じ(デモ用に markerList の中に3つcubeを入れてある)。
+ 悩んだのは頂点の数を変える際、 LineRenderer.numPositions で設定する頂点の数はconstになると思ってたら、普通に変えることができた。
+markerList にGameObjectを追加しても描画してくれるし、GameObjectの座標を変えても線が追従してくれる様になった。
+
+線を囲う とりあえずマーカー同士を線で結ぶことはできたけど、囲うことはできてない。
+ なので、Inspectorをいじると、
+ いい感じになった。
+ 雑記 ブログを書く前は、LineRendererのinspectorにroopの設定があることを知らずに、線を囲うために下のコードで無理やりやっていた。
+ブログを書くためにLineRendererについて再度調べてるうちに、roopを見つけてこれでいいじゃん…ってなった。
+ *1:2Dの線を描画する【Unity】 - Qiita  </description>
+    </item>
+    
+    <item>
+      <title>ゲームオブジェクトが消えた</title>
+      <link>https://ryu955.github.io/posts/2017/10/23/181926/</link>
+      <pubDate>Mon, 23 Oct 2017 18:19:26 +0000</pubDate>
+      
+      <guid>https://ryu955.github.io/posts/2017/10/23/181926/</guid>
+      <description>起きたこと 前回の記事 のことをして以来どうもUnityの調子がわるい
+Hierarchy に何も表示されなくなった
+一応リストを閉じたりする▶はいるけどそれ以外空白
+さらにGameViewは Display 1 No cameras rendering と表示されている
+解決(?)  最初はすべて吹き飛んだと思ったけど、どうやらGameObjectのNameが空になり、InspectorのSetActiveのチェックボックスが外されていた
+Nameとチェックボックスを入れればとりあえずなおる
+原因 バージョンを変えたりしてたせいでメタファイルがクラッシュでもしたのかな</description>
+    </item>
+    
+    <item>
+      <title>【Unity】ボタンの画像を動的に変える</title>
+      <link>https://ryu955.github.io/posts/2017/03/01/214410/</link>
+      <pubDate>Wed, 01 Mar 2017 21:44:10 +0000</pubDate>
+      
+      <guid>https://ryu955.github.io/posts/2017/03/01/214410/</guid>
+      <description>やりたかったこと  uGUIのボタンの画像をスクリプトから動的に変えたかった。 ゲームオブジェクトは複数にしたくなかった。  ゲームオブジェクトを複数用意してSetActive()で出す方法も考えたがそれをやると内部を大分いじる必要が出る為没 - というか、力技すぎてソースがめっちゃ汚くなる    模索 SpriteRenderer  最初にSpriteRendererを用いる方法を思いついた。  using UnityEngine; using System.Collections; public class changeImage : MonoBehaviour { // 画像を動的に変えたいボタンの宣言 SpriteRenderer btnSpriteRenderer; // inspectorで直接画像のスプライトを張り付ける public Sprite Asprite; public Sprite Bsprite; public Sprite Csprite; void Start(){ // SpriteRendererを所得する btnSpriteRenderer = this.GetComponent&amp;amp;lt;SpriteRenderer&amp;gt;(); } void Update(){ // フラグによってそれに合った画像に差し替える if (flg == &amp;quot;a&amp;quot;){ btnSpriteRenderer.sprite = Asprite; }else if(flg == &amp;quot;b&amp;quot;){ btnSpriteRenderer.sprite = Bsprite; }else if(flg == &amp;quot;c&amp;quot;){ btnSpriteRenderer.</description>
+    </item>
+    
+    <item>
+      <title>【Unity】androidでビルドできなかった話</title>
+      <link>https://ryu955.github.io/posts/2017/02/17/010631/</link>
+      <pubDate>Fri, 17 Feb 2017 01:06:31 +0000</pubDate>
+      
+      <guid>https://ryu955.github.io/posts/2017/02/17/010631/</guid>
+      <description> 問題 Unityで作ったやつをiOSでビルドして正しい動きができるの確認できたから，androidでも確認しようとしたらこんなこと言われてビルドが出来なかった． Unable to install APK! Installation failed.See the Console for details.  原因 ビルド端末にビルドしようとしたプロジェクトと同じBundle Identifierのアプリが合ったため． 私が詰まった理由は，ビルド端末にビルドしようとしたプロジェクトと同じアプリケーションはなかったものの，名前は違うがBundle Identifierがビルドしようとしたプロジェクトと同じものが合ったせいで原因を見つけるのに時間がかかった．
+解決方法 解決方法は2つ考えられると思う  ビルド端末に内にある，現在ビルドしようとしているプロジェクトに設定されているBundle Identifierと同じアプリを消す Bundle Identifierを変える  多分1が無難
+Bundle Identifierの確認方法 Build SettingのPlayer Settingsを押す Inspector内のOther Settingsの下の方にBundle Identifierがある </description>
+    </item>
+    
+  </channel>
+</rss>

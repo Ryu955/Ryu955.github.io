@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>ActionSheetPickerを使って時間を選択する :: Ryu955 — nanimo wakaranai</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="description" content="はじめに  時刻表のアプリとかでよく見る，選択したらActionSheetとPickerが混ざったやようなやつが開いて時間を選べるやつを実装したかった   使ったやつ  ActionSheetPicker-3.0  名前の通りActionSheetとPickerが組み合わさったものが使えるプラグイン
+探し求めてたものがピンポイントでありました
+環境  macOS Sierra 10.12.2 Xcode 8.3.1 Swift3 Carthage 0.25.0  ActionSheetPicker-3.0のインポート ActionSheetPickerはライブラリ管理ツールを用いてインポートします．
+今回はライブラリ管理ツールにCarthageを用いますが，CocoaPodsでもできます．
+Carthageのインポートはreadmeに全て書いてあります．
+Carthage自体の使い方はこの記事が丁寧で分かりやすかったので，ここをみつつInputFile名を $(SRCROOT)/Carthage/Build/iOS/CoreActionSheetPicker.framework に置き換えれば使ったことない人でも問題ないと思います．
+こんな感じ  storyboard まず，Main.storyboardにラベルとボタンを置きます．  その後，スクリプトにそれぞれを紐付けます． ボタンはConnectionをActionにします．
+ ソースコード storyboardに置いたボタンに動作を記述します．
+gist.github.com
+実行結果  解説  9行目の datePickerMode の値を変更するとPickerの選択肢が変わる  UIDatePickerMode.date だと下の図みたいに日付だけとか UIDatePickerMode. でいろいろサジェストされるから用途に合ったものを選択するといいと思います      13行目のフォーマットを書き換えることで任意の表示方法にできる 22行目の数字の値の感覚で分が表示される  github リポジトリ
+cloneした後，ディレクトリ内でCarthageをビルドしないとエラーが出ると思うので ，ターミナルでcloneしたディレクトリの中で carthage update &amp;ndash;platform iOS を実行"/>
+<meta name="keywords" content=""/>
+<meta name="robots" content="noodp"/>
+<link rel="canonical" href="https://ryu955.github.io/posts/2017/09/06/052707/" />
+
+
+<link rel="stylesheet" href="https://ryu955.github.io/assets/style.css">
+
+
+<link rel="stylesheet" href="https://ryu955.github.io/style.css">
+
+
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://ryu955.github.io/img/apple-touch-icon-144-precomposed.png">
+<link rel="shortcut icon" href="https://ryu955.github.io/img/favicon.png">
+
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="ActionSheetPickerを使って時間を選択する :: Ryu955 — nanimo wakaranai" />
+<meta name="twitter:description" content="はじめに  時刻表のアプリとかでよく見る，選択したらActionSheetとPickerが混ざったやようなやつが開いて時間を選べるやつを実装したかった   使ったやつ  ActionSheetPicker-3.0  名前の通りActionSheetとPickerが組み合わさったものが使えるプラグイン
+探し求めてたものがピンポイントでありました
+環境  macOS Sierra 10.12.2 Xcode 8.3.1 Swift3 Carthage 0.25.0  ActionSheetPicker-3.0のインポート ActionSheetPickerはライブラリ管理ツールを用いてインポートします．
+今回はライブラリ管理ツールにCarthageを用いますが，CocoaPodsでもできます．
+Carthageのインポートはreadmeに全て書いてあります．
+Carthage自体の使い方はこの記事が丁寧で分かりやすかったので，ここをみつつInputFile名を $(SRCROOT)/Carthage/Build/iOS/CoreActionSheetPicker.framework に置き換えれば使ったことない人でも問題ないと思います．
+こんな感じ  storyboard まず，Main.storyboardにラベルとボタンを置きます．  その後，スクリプトにそれぞれを紐付けます． ボタンはConnectionをActionにします．
+ ソースコード storyboardに置いたボタンに動作を記述します．
+gist.github.com
+実行結果  解説  9行目の datePickerMode の値を変更するとPickerの選択肢が変わる  UIDatePickerMode.date だと下の図みたいに日付だけとか UIDatePickerMode. でいろいろサジェストされるから用途に合ったものを選択するといいと思います      13行目のフォーマットを書き換えることで任意の表示方法にできる 22行目の数字の値の感覚で分が表示される  github リポジトリ
+cloneした後，ディレクトリ内でCarthageをビルドしないとエラーが出ると思うので ，ターミナルでcloneしたディレクトリの中で carthage update &amp;ndash;platform iOS を実行" />
+<meta name="twitter:site" content="https://ryu955.github.io/" />
+<meta name="twitter:creator" content="" />
+<meta name="twitter:image" content="">
+
+
+<meta property="og:locale" content="en" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="ActionSheetPickerを使って時間を選択する :: Ryu955 — nanimo wakaranai">
+<meta property="og:description" content="はじめに  時刻表のアプリとかでよく見る，選択したらActionSheetとPickerが混ざったやようなやつが開いて時間を選べるやつを実装したかった   使ったやつ  ActionSheetPicker-3.0  名前の通りActionSheetとPickerが組み合わさったものが使えるプラグイン
+探し求めてたものがピンポイントでありました
+環境  macOS Sierra 10.12.2 Xcode 8.3.1 Swift3 Carthage 0.25.0  ActionSheetPicker-3.0のインポート ActionSheetPickerはライブラリ管理ツールを用いてインポートします．
+今回はライブラリ管理ツールにCarthageを用いますが，CocoaPodsでもできます．
+Carthageのインポートはreadmeに全て書いてあります．
+Carthage自体の使い方はこの記事が丁寧で分かりやすかったので，ここをみつつInputFile名を $(SRCROOT)/Carthage/Build/iOS/CoreActionSheetPicker.framework に置き換えれば使ったことない人でも問題ないと思います．
+こんな感じ  storyboard まず，Main.storyboardにラベルとボタンを置きます．  その後，スクリプトにそれぞれを紐付けます． ボタンはConnectionをActionにします．
+ ソースコード storyboardに置いたボタンに動作を記述します．
+gist.github.com
+実行結果  解説  9行目の datePickerMode の値を変更するとPickerの選択肢が変わる  UIDatePickerMode.date だと下の図みたいに日付だけとか UIDatePickerMode. でいろいろサジェストされるから用途に合ったものを選択するといいと思います      13行目のフォーマットを書き換えることで任意の表示方法にできる 22行目の数字の値の感覚で分が表示される  github リポジトリ
+cloneした後，ディレクトリ内でCarthageをビルドしないとエラーが出ると思うので ，ターミナルでcloneしたディレクトリの中で carthage update &amp;ndash;platform iOS を実行" />
+<meta property="og:url" content="https://ryu955.github.io/posts/2017/09/06/052707/" />
+<meta property="og:site_name" content="ActionSheetPickerを使って時間を選択する" />
+<meta property="og:image" content="">
+<meta property="og:image:width" content="2048">
+<meta property="og:image:height" content="1024">
+
+<meta property="article:published_time" content="2017-09-06 05:27:07 &#43;0000 UTC" />
+
+
+
+
+
+
+
+</head>
+<body class="dark-theme">
+<div class="container">
+  <header class="header">
+  <span class="header__inner">
+    <a href="https://ryu955.github.io/" class="logo" style="text-decoration: none;">
+  
+    <span class="logo__mark"><svg xmlns="http://www.w3.org/2000/svg" class="greater-icon" width="44" height="44" viewBox="0 0 44 44">
+  <polyline fill="none" stroke="#000" stroke-width="2" points="15 8 29.729 22.382 15 35.367"/>
+</svg>
+</span>
+    <span class="logo__text">hello friend</span>
+    <span class="logo__cursor"></span>
+  
+</a>
+
+    <span class="header__right">
+      
+        <nav class="menu">
+  <ul class="menu__inner menu__inner--desktop">
+    
+      
+        
+          <li><a href="/about">About</a></li>
+        
+      
+        
+          <li><a href="/tags">Tags</a></li>
+        
+      
+      
+    
+  </ul>
+
+  <ul class="menu__inner menu__inner--mobile">
+    
+      
+        <li><a href="/about">About</a></li>
+      
+    
+      
+        <li><a href="/tags">Tags</a></li>
+      
+    
+  </ul>
+</nav>
+
+        <span class="menu-trigger">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M0 0h24v24H0z" fill="none"/>
+            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+          </svg>
+        </span>
+      
+      <span class="theme-toggle">
+        <svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+</svg>
+
+      </span>
+    </span>
+  </span>
+</header>
+
+
+  <div class="content">
+    
+  <div class="post">
+    <h2 class="post-title"><a href="https://ryu955.github.io/posts/2017/09/06/052707/">ActionSheetPickerを使って時間を選択する</a></h2>
+    <div class="post-meta">
+      
+        <span class="post-date">
+            2017-09-06
+        </span>
+      
+      
+      
+    </div>
+
+    
+      <span class="post-tags">
+        
+          #<a href="https://ryu955.github.io/tags/swift">Swift</a>&nbsp;
+        
+          #<a href="https://ryu955.github.io/tags/%E3%83%97%E3%83%A9%E3%82%B0%E3%82%A4%E3%83%B3">プラグイン</a>&nbsp;
+        
+      </span>
+    
+
+    
+
+    <div class="post-content">
+      
+
+<h2 id="はじめに">はじめに</h2>
+
+<ul>
+<li>時刻表のアプリとかでよく見る，選択したらActionSheetとPickerが混ざったやようなやつが開いて時間を選べるやつを実装したかった</li>
+</ul>
+
+
+  <figure class="left" >
+    <img src="/images/2017/09/06/052707/20170906033132.jpg"   />
+    
+  </figure>
+
+
+
+<h2 id="使ったやつ">使ったやつ</h2>
+
+<ul>
+<li><a href="https://github.com/skywinder/ActionSheetPicker-3.0">ActionSheetPicker-3.0</a></li>
+</ul>
+
+<p>名前の通りActionSheetとPickerが組み合わさったものが使えるプラグイン</p>
+
+<p>探し求めてたものがピンポイントでありました</p>
+
+<h2 id="環境">環境</h2>
+
+<ul>
+<li>macOS Sierra 10.12.2</li>
+<li>Xcode 8.3.1</li>
+<li>Swift3</li>
+<li>Carthage 0.25.0</li>
+</ul>
+
+<h2 id="actionsheetpicker-3-0のインポート">ActionSheetPicker-3.0のインポート</h2>
+
+<p>ActionSheetPickerはライブラリ管理ツールを用いてインポートします．</p>
+
+<p>今回はライブラリ管理ツールにCarthageを用いますが，<a href="https://github.com/skywinder/ActionSheetPicker-3.0#cocoapods">CocoaPodsでもできます</a>．</p>
+
+<p>Carthageのインポートは<a href="https://github.com/skywinder/ActionSheetPicker-3.0#carthage">readme</a>に全て書いてあります．</p>
+
+<p>Carthage自体の使い方は<a href="http://qiita.com/yutat93/items/97fe9bc2bf2e97da7ec1">この記事</a>が丁寧で分かりやすかったので，ここをみつつInputFile名を
+ <code>$(SRCROOT)/Carthage/Build/iOS/CoreActionSheetPicker.framework</code> に置き換えれば使ったことない人でも問題ないと思います．</p>
+
+<p>こんな感じ
+
+  <figure class="left" >
+    <img src="/images/2017/09/06/052707/20170906040407.png"   />
+    
+  </figure>
+
+</p>
+
+<h2 id="storyboard">storyboard</h2>
+
+<p>まず，Main.storyboardにラベルとボタンを置きます．
+
+  <figure class="left" >
+    <img src="/images/2017/09/06/052707/20170906040751.png"   />
+    
+  </figure>
+
+</p>
+
+<p>その後，スクリプトにそれぞれを紐付けます．
+ボタンはConnectionをActionにします．</p>
+
+
+  <figure class="left" >
+    <img src="/images/2017/09/06/052707/20170906041436.png"   />
+    
+  </figure>
+
+
+
+<h2 id="ソースコード">ソースコード</h2>
+
+<p>storyboardに置いたボタンに動作を記述します．</p>
+
+<p><script src="https://gist.github.com/Ryu955/e2ab6ace80c899d65400126421aa16d2.js"> </script><cite class="hatena-citation"><a href="https://gist.github.com/Ryu955/e2ab6ace80c899d65400126421aa16d2">gist.github.com</a></cite></p>
+
+<h2 id="実行結果">実行結果</h2>
+
+
+  <figure class="left" >
+    <img src="/images/2017/09/06/052707/20170906051323.gif"   />
+    
+  </figure>
+
+
+
+<h2 id="解説">解説</h2>
+
+<ul>
+<li>9行目の <code>datePickerMode</code> の値を変更するとPickerの選択肢が変わる
+
+<ul>
+<li><code>UIDatePickerMode.date</code> だと下の図みたいに日付だけとか</li>
+<li><code>UIDatePickerMode.</code> でいろいろサジェストされるから用途に合ったものを選択するといいと思います</li>
+</ul>
+</li>
+</ul>
+
+
+  <figure class="left" >
+    <img src="/images/2017/09/06/052707/20170906051913.png"   />
+    
+  </figure>
+
+
+
+<ul>
+<li>13行目のフォーマットを書き換えることで任意の表示方法にできる</li>
+<li>22行目の数字の値の感覚で分が表示される</li>
+</ul>
+
+<h2 id="github">github</h2>
+
+<p><a href="https://github.com/Ryu955/DatePickerDemo">リポジトリ</a></p>
+
+<p>cloneした後，ディレクトリ内でCarthageをビルドしないとエラーが出ると思うので ，ターミナルでcloneしたディレクトリの中で <code>carthage update &ndash;platform iOS</code> を実行</p>
+
+    </div>
+    
+      <div class="pagination">
+        <div class="pagination__title">
+          <span class="pagination__title-h">Read other posts</span>
+          <hr />
+        </div>
+        <div class="pagination__buttons">
+          
+            <span class="button previous">
+              <a href="https://ryu955.github.io/posts/2017/09/11/143817/">
+                <span class="button__icon">←</span>
+                <span class="button__text">OSC2017 Tokyo/Fallで学生LTしてきた</span>
+              </a>
+            </span>
+          
+          
+            <span class="button next">
+              <a href="https://ryu955.github.io/posts/2017/09/04/023913/">
+                <span class="button__text">大学のバスの時刻表をスクレイピングする</span>
+                <span class="button__icon">→</span>
+              </a>
+            </span>
+          
+        </div>
+      </div>
+    
+
+    
+
+    </div>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <a href="https://ryu955.github.io/" class="logo" style="text-decoration: none;">
+  
+    <span class="logo__mark"><svg xmlns="http://www.w3.org/2000/svg" class="greater-icon" width="44" height="44" viewBox="0 0 44 44">
+  <polyline fill="none" stroke="#000" stroke-width="2" points="15 8 29.729 22.382 15 35.367"/>
+</svg>
+</span>
+    <span class="logo__text">hello friend</span>
+    <span class="logo__cursor"></span>
+  
+</a>
+
+      <div class="copyright">
+        <span>© 2019 Powered by <a href="http://gohugo.io">Hugo</a></span>
+        <span>Theme created by <a href="https://twitter.com/panr">panr</a></span>
+      </div>
+    
+  </div>
+</footer>
+
+<script src="https://ryu955.github.io/assets/main.js"></script>
+<script src="https://ryu955.github.io/assets/prism.js"></script>
+
+  
+</div>
+
+</body>
+</html>

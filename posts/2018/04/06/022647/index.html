@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>Unity初心者用サイトまとめ :: Ryu955 — nanimo wakaranai</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="description" content="はじめに Unity始めたばかりの人たちが研究室に多かったので、参考になりそうなサイトをかき集めて見ました。
+Unityはバージョンアップで色々変わるので、サイトに乗っているバージョンと自分の使うバージョンを確認してください。
+チュートリアル系 Unity - はじめてのUnity 初学者はとりあえずこれやっておけば間違いないと思います。 本当に基礎的なことが詰め込まれた良いチュートリアルだと思います。
+ほかにもUnity公式のチュートリアルはどれも質が高いと思います。 Unity - Learn - Modules
+【Unity2D】Unityで2Dミニゲームを作るチュートリアル（第１回） - Qiita 私がUnityを初めて触ったときに、一番最初にやったチュートリアルがこれでした。 パーティクルやオブジェクトをランダムに動かすといったことをこれで学ぶことができました。
+【Unity入門】60分で作るシューティングゲーム　第１回 - おもちゃラボ 私はこのチュートリアルでprefabについていろいろ学ぶことができました。 このチュートリアル以外にも様々な記事があるので目を通して見ると良いと思います。 おもちゃラボ
+また、このブログを書いているひとはUnityの教科書 Unity 2017完全対応版 2D&amp;amp;3Dスマートフォンゲーム入門講座 (Entertainment&amp;amp;IDEA) | 北村 愛実 |本 | 通販 | Amazonを書いたひとです。私もUnity5時代の本を持っています。 この本はイラストでの解説が多くわかりやすいのでおすすめです。
+Unity入門-openbook openbookにあるチュートリアルです。 ブロック崩しだけ実際にやった記憶があります。 馴染みのあるゲームを自分で作るのは楽しかったです。
+Unity入門 (全26回) - プログラミングならドットインストール 自分はやったことありませんが、動画で実際にやってるところを見ながらのほうがいい人はドットインストールは良いと思います。 ただ、Unityのバージョンが4.2.0なのが…
+情報収集 Unity スクリプトリファレンス Unityの公式リファレンスは結構しっかりしてるのでよく使います。
+テラシュールブログ Unityについて調べ物する際、必ず目にします。 実行時のGIFを載せてくてるし、説明もうまいのでわかりやすいです。 テラシュールブログのありがたみはUnity触り始めてすぐ痛感すると思います。
+Unity(C#)初心者・入門者向けチュートリアル ひよこのたまご テラシュールブログの次によく見ることになると思います。 バックグラウンドが黄色で目がチカチカして見にくい点以外はとても良いです。
+私はやったことがないのですが、チュートリアルもたくさん載っています。 Unity5チュートリアルアプリ一覧 - Unity(C#)初心者・入門者向けチュートリアル ひよこのたまご
+ブログ 【Unity】素人が7日間クソゲーを作り続けてわかったこと | uinyan．com 有名な記事なのでUnityやったことなくても知ってるひとは多いと思います。 この記事と合わせて後日談である【Unity】クソゲーを作って晒したら世界が変わった件 | uinyan．comを読むと、自分もやらないとなって気持ちになれます。"/>
+<meta name="keywords" content=""/>
+<meta name="robots" content="noodp"/>
+<link rel="canonical" href="https://ryu955.github.io/posts/2018/04/06/022647/" />
+
+
+<link rel="stylesheet" href="https://ryu955.github.io/assets/style.css">
+
+
+<link rel="stylesheet" href="https://ryu955.github.io/style.css">
+
+
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://ryu955.github.io/img/apple-touch-icon-144-precomposed.png">
+<link rel="shortcut icon" href="https://ryu955.github.io/img/favicon.png">
+
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Unity初心者用サイトまとめ :: Ryu955 — nanimo wakaranai" />
+<meta name="twitter:description" content="はじめに Unity始めたばかりの人たちが研究室に多かったので、参考になりそうなサイトをかき集めて見ました。
+Unityはバージョンアップで色々変わるので、サイトに乗っているバージョンと自分の使うバージョンを確認してください。
+チュートリアル系 Unity - はじめてのUnity 初学者はとりあえずこれやっておけば間違いないと思います。 本当に基礎的なことが詰め込まれた良いチュートリアルだと思います。
+ほかにもUnity公式のチュートリアルはどれも質が高いと思います。 Unity - Learn - Modules
+【Unity2D】Unityで2Dミニゲームを作るチュートリアル（第１回） - Qiita 私がUnityを初めて触ったときに、一番最初にやったチュートリアルがこれでした。 パーティクルやオブジェクトをランダムに動かすといったことをこれで学ぶことができました。
+【Unity入門】60分で作るシューティングゲーム　第１回 - おもちゃラボ 私はこのチュートリアルでprefabについていろいろ学ぶことができました。 このチュートリアル以外にも様々な記事があるので目を通して見ると良いと思います。 おもちゃラボ
+また、このブログを書いているひとはUnityの教科書 Unity 2017完全対応版 2D&amp;amp;3Dスマートフォンゲーム入門講座 (Entertainment&amp;amp;IDEA) | 北村 愛実 |本 | 通販 | Amazonを書いたひとです。私もUnity5時代の本を持っています。 この本はイラストでの解説が多くわかりやすいのでおすすめです。
+Unity入門-openbook openbookにあるチュートリアルです。 ブロック崩しだけ実際にやった記憶があります。 馴染みのあるゲームを自分で作るのは楽しかったです。
+Unity入門 (全26回) - プログラミングならドットインストール 自分はやったことありませんが、動画で実際にやってるところを見ながらのほうがいい人はドットインストールは良いと思います。 ただ、Unityのバージョンが4.2.0なのが…
+情報収集 Unity スクリプトリファレンス Unityの公式リファレンスは結構しっかりしてるのでよく使います。
+テラシュールブログ Unityについて調べ物する際、必ず目にします。 実行時のGIFを載せてくてるし、説明もうまいのでわかりやすいです。 テラシュールブログのありがたみはUnity触り始めてすぐ痛感すると思います。
+Unity(C#)初心者・入門者向けチュートリアル ひよこのたまご テラシュールブログの次によく見ることになると思います。 バックグラウンドが黄色で目がチカチカして見にくい点以外はとても良いです。
+私はやったことがないのですが、チュートリアルもたくさん載っています。 Unity5チュートリアルアプリ一覧 - Unity(C#)初心者・入門者向けチュートリアル ひよこのたまご
+ブログ 【Unity】素人が7日間クソゲーを作り続けてわかったこと | uinyan．com 有名な記事なのでUnityやったことなくても知ってるひとは多いと思います。 この記事と合わせて後日談である【Unity】クソゲーを作って晒したら世界が変わった件 | uinyan．comを読むと、自分もやらないとなって気持ちになれます。" />
+<meta name="twitter:site" content="https://ryu955.github.io/" />
+<meta name="twitter:creator" content="" />
+<meta name="twitter:image" content="">
+
+
+<meta property="og:locale" content="en" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Unity初心者用サイトまとめ :: Ryu955 — nanimo wakaranai">
+<meta property="og:description" content="はじめに Unity始めたばかりの人たちが研究室に多かったので、参考になりそうなサイトをかき集めて見ました。
+Unityはバージョンアップで色々変わるので、サイトに乗っているバージョンと自分の使うバージョンを確認してください。
+チュートリアル系 Unity - はじめてのUnity 初学者はとりあえずこれやっておけば間違いないと思います。 本当に基礎的なことが詰め込まれた良いチュートリアルだと思います。
+ほかにもUnity公式のチュートリアルはどれも質が高いと思います。 Unity - Learn - Modules
+【Unity2D】Unityで2Dミニゲームを作るチュートリアル（第１回） - Qiita 私がUnityを初めて触ったときに、一番最初にやったチュートリアルがこれでした。 パーティクルやオブジェクトをランダムに動かすといったことをこれで学ぶことができました。
+【Unity入門】60分で作るシューティングゲーム　第１回 - おもちゃラボ 私はこのチュートリアルでprefabについていろいろ学ぶことができました。 このチュートリアル以外にも様々な記事があるので目を通して見ると良いと思います。 おもちゃラボ
+また、このブログを書いているひとはUnityの教科書 Unity 2017完全対応版 2D&amp;amp;3Dスマートフォンゲーム入門講座 (Entertainment&amp;amp;IDEA) | 北村 愛実 |本 | 通販 | Amazonを書いたひとです。私もUnity5時代の本を持っています。 この本はイラストでの解説が多くわかりやすいのでおすすめです。
+Unity入門-openbook openbookにあるチュートリアルです。 ブロック崩しだけ実際にやった記憶があります。 馴染みのあるゲームを自分で作るのは楽しかったです。
+Unity入門 (全26回) - プログラミングならドットインストール 自分はやったことありませんが、動画で実際にやってるところを見ながらのほうがいい人はドットインストールは良いと思います。 ただ、Unityのバージョンが4.2.0なのが…
+情報収集 Unity スクリプトリファレンス Unityの公式リファレンスは結構しっかりしてるのでよく使います。
+テラシュールブログ Unityについて調べ物する際、必ず目にします。 実行時のGIFを載せてくてるし、説明もうまいのでわかりやすいです。 テラシュールブログのありがたみはUnity触り始めてすぐ痛感すると思います。
+Unity(C#)初心者・入門者向けチュートリアル ひよこのたまご テラシュールブログの次によく見ることになると思います。 バックグラウンドが黄色で目がチカチカして見にくい点以外はとても良いです。
+私はやったことがないのですが、チュートリアルもたくさん載っています。 Unity5チュートリアルアプリ一覧 - Unity(C#)初心者・入門者向けチュートリアル ひよこのたまご
+ブログ 【Unity】素人が7日間クソゲーを作り続けてわかったこと | uinyan．com 有名な記事なのでUnityやったことなくても知ってるひとは多いと思います。 この記事と合わせて後日談である【Unity】クソゲーを作って晒したら世界が変わった件 | uinyan．comを読むと、自分もやらないとなって気持ちになれます。" />
+<meta property="og:url" content="https://ryu955.github.io/posts/2018/04/06/022647/" />
+<meta property="og:site_name" content="Unity初心者用サイトまとめ" />
+<meta property="og:image" content="">
+<meta property="og:image:width" content="2048">
+<meta property="og:image:height" content="1024">
+
+<meta property="article:published_time" content="2018-04-06 02:26:47 &#43;0000 UTC" />
+
+
+
+
+
+
+
+</head>
+<body class="dark-theme">
+<div class="container">
+  <header class="header">
+  <span class="header__inner">
+    <a href="https://ryu955.github.io/" class="logo" style="text-decoration: none;">
+  
+    <span class="logo__mark"><svg xmlns="http://www.w3.org/2000/svg" class="greater-icon" width="44" height="44" viewBox="0 0 44 44">
+  <polyline fill="none" stroke="#000" stroke-width="2" points="15 8 29.729 22.382 15 35.367"/>
+</svg>
+</span>
+    <span class="logo__text">hello friend</span>
+    <span class="logo__cursor"></span>
+  
+</a>
+
+    <span class="header__right">
+      
+        <nav class="menu">
+  <ul class="menu__inner menu__inner--desktop">
+    
+      
+        
+          <li><a href="/about">About</a></li>
+        
+      
+        
+          <li><a href="/tags">Tags</a></li>
+        
+      
+      
+    
+  </ul>
+
+  <ul class="menu__inner menu__inner--mobile">
+    
+      
+        <li><a href="/about">About</a></li>
+      
+    
+      
+        <li><a href="/tags">Tags</a></li>
+      
+    
+  </ul>
+</nav>
+
+        <span class="menu-trigger">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M0 0h24v24H0z" fill="none"/>
+            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+          </svg>
+        </span>
+      
+      <span class="theme-toggle">
+        <svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+</svg>
+
+      </span>
+    </span>
+  </span>
+</header>
+
+
+  <div class="content">
+    
+  <div class="post">
+    <h2 class="post-title"><a href="https://ryu955.github.io/posts/2018/04/06/022647/">Unity初心者用サイトまとめ</a></h2>
+    <div class="post-meta">
+      
+        <span class="post-date">
+            2018-04-06
+        </span>
+      
+      
+      
+    </div>
+
+    
+
+    
+
+    <div class="post-content">
+      
+
+<h2 id="はじめに">はじめに</h2>
+
+<p>Unity始めたばかりの人たちが研究室に多かったので、参考になりそうなサイトをかき集めて見ました。</p>
+
+<p>Unityはバージョンアップで色々変わるので、サイトに乗っているバージョンと自分の使うバージョンを確認してください。</p>
+
+<h2 id="チュートリアル系">チュートリアル系</h2>
+
+<h3 id="unity-はじめてのunity">Unity - はじめてのUnity</h3>
+
+<p>初学者はとりあえずこれやっておけば間違いないと思います。
+本当に基礎的なことが詰め込まれた良いチュートリアルだと思います。</p>
+
+<p>ほかにもUnity公式のチュートリアルはどれも質が高いと思います。
+<a href="https://unity3d.com/jp/learn/tutorials">Unity - Learn - Modules</a></p>
+
+<h3 id="unity2d-unityで2dミニゲームを作るチュートリアル-第１回-qiita">【Unity2D】Unityで2Dミニゲームを作るチュートリアル（第１回） - Qiita</h3>
+
+<p>私がUnityを初めて触ったときに、一番最初にやったチュートリアルがこれでした。
+パーティクルやオブジェクトをランダムに動かすといったことをこれで学ぶことができました。</p>
+
+<h3 id="unity入門-60分で作るシューティングゲーム-第１回-おもちゃラボ">【Unity入門】60分で作るシューティングゲーム　第１回 - おもちゃラボ</h3>
+
+<p>私はこのチュートリアルでprefabについていろいろ学ぶことができました。
+このチュートリアル以外にも様々な記事があるので目を通して見ると良いと思います。
+<a href="http://nn-hokuson.hatenablog.com/">おもちゃラボ</a></p>
+
+<p>また、このブログを書いているひとは<a href="https://www.amazon.co.jp/gp/product/4797393521/ref=as_li_tl?ie=UTF8&amp;camp=247&amp;creative=1211&amp;creativeASIN=4797393521&amp;linkCode=as2&amp;tag=vlsiprograma-22&amp;linkId=67079c36b594736b34829514b076b9dd">Unityの教科書 Unity 2017完全対応版 2D&amp;3Dスマートフォンゲーム入門講座 (Entertainment&amp;IDEA) | 北村 愛実 |本 | 通販 | Amazon</a>を書いたひとです。私もUnity5時代の本を持っています。
+この本はイラストでの解説が多くわかりやすいのでおすすめです。</p>
+
+<h3 id="unity入門-openbook">Unity入門-openbook</h3>
+
+<p>openbookにあるチュートリアルです。
+ブロック崩しだけ実際にやった記憶があります。
+馴染みのあるゲームを自分で作るのは楽しかったです。</p>
+
+<h3 id="unity入門-全26回-プログラミングならドットインストール">Unity入門 (全26回) - プログラミングならドットインストール</h3>
+
+<p>自分はやったことありませんが、動画で実際にやってるところを見ながらのほうがいい人はドットインストールは良いと思います。
+ただ、Unityのバージョンが4.2.0なのが…</p>
+
+<h2 id="情報収集">情報収集</h2>
+
+<h3 id="unity-スクリプトリファレンス">Unity スクリプトリファレンス</h3>
+
+<p>Unityの公式リファレンスは結構しっかりしてるのでよく使います。</p>
+
+<h3 id="テラシュールブログ">テラシュールブログ</h3>
+
+<p>Unityについて調べ物する際、必ず目にします。
+実行時のGIFを載せてくてるし、説明もうまいのでわかりやすいです。
+テラシュールブログのありがたみはUnity触り始めてすぐ痛感すると思います。</p>
+
+<h3 id="unity-c-初心者-入門者向けチュートリアル-ひよこのたまご">Unity(C#)初心者・入門者向けチュートリアル ひよこのたまご</h3>
+
+<p>テラシュールブログの次によく見ることになると思います。
+バックグラウンドが黄色で目がチカチカして見にくい点以外はとても良いです。</p>
+
+<p>私はやったことがないのですが、チュートリアルもたくさん載っています。
+<a href="http://hiyotama.hatenablog.com/entry/tutorials">Unity5チュートリアルアプリ一覧 - Unity(C#)初心者・入門者向けチュートリアル ひよこのたまご</a></p>
+
+<h2 id="ブログ">ブログ</h2>
+
+<h3 id="unity-素人が7日間クソゲーを作り続けてわかったこと-uinyan-com">【Unity】素人が7日間クソゲーを作り続けてわかったこと | uinyan．com</h3>
+
+<p>有名な記事なのでUnityやったことなくても知ってるひとは多いと思います。
+この記事と合わせて後日談である<a href="https://uinyan.com/unity_7days_challenge_after/">【Unity】クソゲーを作って晒したら世界が変わった件 | uinyan．com</a>を読むと、自分もやらないとなって気持ちになれます。</p>
+
+<h2 id="スライド">スライド</h2>
+
+<h3 id="はじめてのunity入門-speaker-deck">はじめてのUnity入門 // Speaker Deck</h3>
+
+<p>個人的にめっっっっっちゃおすすめできる資料です。
+チュートリアルで実際に作るものもそうですが、序盤20ページのUnityの概念についての説明がかなりわかりやすいです。</p>
+
+<p>これは<a href="https://kenjin.unity3d.jp/">Unity県人会議</a>にあるUnity道場のハンズオン的なのに使われた資料みたいです。
+これ以外にも、使われた資料は公開してくれています。<a href="https://speakerdeck.com/unitydojo">Presentations by unitydojo // Speaker Deck</a>
+どれも面白くてわかりやすいので読んでみると良いと思います。</p>
+
+<h3 id="unityを使ったケ-ームテ-サ-イン超入門">Unityを使ったゲームデザイン超入門</h3>
+
+<p>Unityコミュニティエバンジェリストの方の発表スライド。
+これ以外にも、マネタイズやゲームシナリオについてのスライドもあって、そっちも面白い。</p>
+
+    </div>
+    
+      <div class="pagination">
+        <div class="pagination__title">
+          <span class="pagination__title-h">Read other posts</span>
+          <hr />
+        </div>
+        <div class="pagination__buttons">
+          
+            <span class="button previous">
+              <a href="https://ryu955.github.io/posts/2018/04/28/173752/">
+                <span class="button__icon">←</span>
+                <span class="button__text">Kotlinを始めた</span>
+              </a>
+            </span>
+          
+          
+            <span class="button next">
+              <a href="https://ryu955.github.io/posts/2018/03/30/015516/">
+                <span class="button__text"> LineRendererでGameObjectの周りを線を囲いたい</span>
+                <span class="button__icon">→</span>
+              </a>
+            </span>
+          
+        </div>
+      </div>
+    
+
+    
+
+    </div>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <a href="https://ryu955.github.io/" class="logo" style="text-decoration: none;">
+  
+    <span class="logo__mark"><svg xmlns="http://www.w3.org/2000/svg" class="greater-icon" width="44" height="44" viewBox="0 0 44 44">
+  <polyline fill="none" stroke="#000" stroke-width="2" points="15 8 29.729 22.382 15 35.367"/>
+</svg>
+</span>
+    <span class="logo__text">hello friend</span>
+    <span class="logo__cursor"></span>
+  
+</a>
+
+      <div class="copyright">
+        <span>© 2019 Powered by <a href="http://gohugo.io">Hugo</a></span>
+        <span>Theme created by <a href="https://twitter.com/panr">panr</a></span>
+      </div>
+    
+  </div>
+</footer>
+
+<script src="https://ryu955.github.io/assets/main.js"></script>
+<script src="https://ryu955.github.io/assets/prism.js"></script>
+
+  
+</div>
+
+</body>
+</html>

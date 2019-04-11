@@ -24,6 +24,483 @@
     </item>
     
     <item>
+      <title>steam vr plugin 2.2.0でtrackerの座標を取る</title>
+      <link>https://ryu955.github.io/posts/2019/02/19/130223/</link>
+      <pubDate>Tue, 19 Feb 2019 13:02:23 +0000</pubDate>
+      
+      <guid>https://ryu955.github.io/posts/2019/02/19/130223/</guid>
+      <description> 環境  steam vr plugin 2.2.0 Unity 2017.4.17f1 Windwos10  やりかた steam vrをimportしてしsimple sampleでためしてみる。
+ トラッカーの座標を反映させたいオブジェクトをつくる。 今回はCubeにしてみる。
+ CubeのInspectorにSteam VR_Tracked Objectをアタッチ。
+ Indexの座標(デフォルトはHMD)が取れる。 IndexはHMD以外はDeviceになってる。 Deviceは、コントローラ、ステーション、トラッカーが含まれていて、おそらく接続順に割りあてられてるっぽい。 この中からトラッカーを探しあてればおわり。
+ </description>
+    </item>
+    
+    <item>
+      <title>Lily58ビルドログ</title>
+      <link>https://ryu955.github.io/posts/2019/01/30/003541/</link>
+      <pubDate>Wed, 30 Jan 2019 00:35:41 +0000</pubDate>
+      
+      <guid>https://ryu955.github.io/posts/2019/01/30/003541/</guid>
+      <description>もくじ もくじ はじめに Lily58を選んだ理由 キットの中身 キットの他に買ったもの 購入理由等   制作ログ ダイオード OLED Pro micro と こまいもの キースイッチ 組み立て 書き込み   1ヶ月使った感想 おわりに  はじめに  Lily58を作りました。
+まえまえから自作キーボードには興味があったものの、HHKBでいっかなって思いがあって踏みきれずにいました。
+そんな中、Twitterでいい感じのキーボードが冬コミにだされるという情報を手にいれ、重い腰を上げてキーボードを買うために、年末の寒い中、冬コミに初参加してきました。
+今回はその作成したLily58のビルドログです。
+  Lily58を選んだ理由 レツプリをはじめ、4行のキーボードはキーが足りないのではと思いました。 じゃあ、キーは多ければいいかというとそうではなさそうです。 Ergo dox EZを買おうか悩んでた時期があり、その時Ergo doxのレビューを読み漁ってました。 それらのレビューでは、結局親指キー全部は使わないという意見を結構みました。
+ということで、60キー前後くらいがよさそうだと思いました。 さらに欲を言うと、レツプリやHelixみたいな完全な格子型じゃなくて親指キーあったらいいなぁって思っていました。
+こんな思いがあるなか、Twitterで求める条件を満たしているLily58なるものがあるのを知り、購入に至りました。
+キットの中身  詳しい内容物はビルドガイド参照
+  # キットの他に買ったもの     品名   購入元   値段   購入日   到着日       マグネット式 MicroUSBケーブル   amazon   1299   1/3   1/4     はんだ   amazon   1003   1/3   1/4     静音化リング  amazon   980   1/3   1/4     セメダイン   amazon   618   1/3   1/4     OLED × 2   遊舎工房   1500   1/1   1/3     コンスルー × 4   遊舎工房   880   1/1   1/3     送料   遊舎工房   300   1/1   1/3     キースイッチ silent red × 60   KBDfans   $22.</description>
+    </item>
+    
+    <item>
+      <title>Amazon買ったもの</title>
+      <link>https://ryu955.github.io/posts/2018/12/10/233525/</link>
+      <pubDate>Mon, 10 Dec 2018 23:35:25 +0000</pubDate>
+      
+      <guid>https://ryu955.github.io/posts/2018/12/10/233525/</guid>
+      <description>はじめに なにかの Advent Calendar 2018 - Adventar
+書いていきます。
+この数ヶ月ろくにコードを書いていなく、技術ネタがまったくないので、今年amazonで買ったものについて書いていこうと思います。
+アドベントカレンダー中に一回は技術ネタを投稿したいので、なにかやります。
+飲食系 KYG 電動コーヒーミル  https://www.amazon.co.jp/dp/B07C7B3J7Y/ref=cm_sw_r_tw_dp_U_x_94MdCbG05RFG6
+手軽に豆を挽けるのは良いです。 そして安い。 ただ、挽いたあとのまめをドリッパーなりに入れるのがめんどくさい。 それ以外はおおむね満足度が高い。
+HARIO (ハリオ) 珈琲キャニスター  https://www.amazon.co.jp/gp/product/B0056VXY5G/ref=oh_aui_detailpage_o00_s01?ie=UTF8&amp;amp;psc=1
+せっかくいい豆を買っても、袋のままだとよろしくないかなって思って買ったもの。 開けやすいのはいいんだけれど、その分、普通に手で蓋を取れるから密閉性は低そうなのがネック。
+BODUM ボダム CHAMBORD フレンチプレスコーヒーメーカー  https://www.amazon.co.jp/gp/product/B0051OOM68/ref=oh_aui_detailpage_o04_s00?ie=UTF8&amp;amp;psc=1
+ペーパードリップを家でやるのがめんどくさすぎて買ってみました。 フレンチプレスの特徴として油分が多いというのがあります。 ペーパードリップと違い、油を遮るものがないかららしいです。
+コーヒーはけっこう好きなのですが、最近発覚したのが、私の身体はコーヒーの油分を受けつけないらしく、摂取しすぎると気持ちわるくなってしまいます。 なので、フレンチプレスのコーヒーはおいしいのですが、身体が拒否するという悲しい結果となっています。 なので、ブラックじゃなくてミルクを入れて飲むようにしています。
+HARIO (ハリオ) ネルドリップ  Amazon CAPTCHA
+これもペーパードリップとは違う気分が欲しくて買ってみたやつです。 ネルドリップの特徴はペーパーよりフィルターの目が粗く、コーヒーの微粒子が布フィルターから抜け落ちるので、舌触りの滑らかなコーヒーになるらしいです。
+たしかに美味しくていいのですが、これは管理がめちゃくちゃめんどくさい。 まず、ネルドリッパーを始めてつかう時はコーヒー液で20分煮る必要がある。 次に、単純にドリップがめんどくさい。 最後に使い終わったら、沸騰した水に布を付け、洗浄したあとに、冷水を入れた容器に付けて冷蔵庫管理して、毎日水を変えないといけない。
+特に最後のなんて毎日なんてやってられないので、私はジップロックに入れて冷凍保存にしていました。 ぐぐったらそれでもまぁ平気らしいので。。。
+サーモス 真空断熱タンブラー  Amazon CAPTCHA
+めっちゃ良い。 さめたコーヒーほどおいしくない飲みものはこの世にないのでおすすめ。
+ロータス カラメルビスケット  Amazon CAPTCHA
+おいしい。
+デスク環境系 タブレット アーム スタンド  https://www.</description>
+    </item>
+    
+    <item>
+      <title>オーストラリア旅行記</title>
+      <link>https://ryu955.github.io/posts/2018/12/04/220334/</link>
+      <pubDate>Tue, 04 Dec 2018 22:03:34 +0000</pubDate>
+      
+      <guid>https://ryu955.github.io/posts/2018/12/04/220334/</guid>
+      <description> はじめに いろいろあっていまオーストラリアにいます。
+なにかの Advent Calendar 2018 - Adventar
+の4日目を書く人がいないので書きます。
+出国 3日の17:20JSTに空港集合の19:20出国の予定だったので、15:00に成田空港につくように移動しました。
+成田空港では、ポケモンセンターがあったり、銀だこが外国人観光客で行列ができてたのが印象的でした。
+2万円を220AUDに換金しましたが、AUDは紙幣にクリア部分があるのがかっこよかったです。
+ USD 飛行機 成田からメルボルン空港までの直行便に乗ったので、10時間40分くらい飛行機の中にいました。
+飛行機の隣にすわっていたオーストラリアの方が日本語を話せたため、雑談をしたり、CAへの通訳をしてもらったりしました。 その方は2ヶ月間日本にいたそうなので、どこへ行ったのかと聞いてみたところ、東京、奈良、京都、北海道、青森などメジャーなところのなかに岐阜がはいっていたのが印象的でした。
+入国 途中、まじで墜落するんじゃないかってくらい揺れたこと以外は無事に入国することができました。
+ 飛行機  メルボルン空港 昼 昼はQueen Victoria Marketで食べました。 ハンバーガーはあほじゃないかというくらいでかかったです。
+ Queen Victoria Market  食べたところ  食べたもの 夜 昼を食べたあと、ホテルにもどり休んだあと、メルボルン内を散策してホテルに戻って今にいたります。
+   タコ </description>
+    </item>
+    
+    <item>
+      <title>SKKのすゝめ</title>
+      <link>https://ryu955.github.io/posts/2018/12/01/203052/</link>
+      <pubDate>Sat, 01 Dec 2018 20:30:52 +0000</pubDate>
+      
+      <guid>https://ryu955.github.io/posts/2018/12/01/203052/</guid>
+      <description>はじめに 今年も気がつけばアドベントカレンダーの時期になっていました。 なにかの Advent Calendar 2018 - Adventar 全て埋めて完走目指しましょう。
+今回話す内容はIMEについてです。 その中でも、私が使っているSKK IMEを布教しようと思い書きます。
+SKK(Simple Kana to Kanji conversion program)とは  SKKは佐藤雅彦教授により開発されたEmacs用の日本語入力プログラムです。日本語の文法解析を一切行なわないという斬新な設計思想で作られており、シフトキーによる補助操作で語句の区切りを人間側が明示することで、口語や方言、未知の造語といった従来の日本語入力方式が特に苦手とする文に対しても送りがなの誤認識が原理的に発生しないという優れた特性を持っています。 出展：SKK日本語入力FEP
+ らしいです。
+特徴 よく使われているであろう、Google IMEやMicrosoft IME等は日本語を打つ際、形態素解析をして、良い感じに文章をまとめて変換してくれますが、SKKは形態素解析を行いません。
+じゃあ、どうやって変換するんだと言うと、ユーザ自身が、この文字は漢字に変換したいという範囲を決めます。
+使っている様子 とりあえず、動いているところを見ないとピンとこないと思うので、こんな感じ。
+ 使いかた 漢字の開始位置、送り仮名の開始位置で、shiftキーを押します。
+具体的に、
+我輩は猫である。名前はまだ無い
+を打つためには
+Wagahai haNeko dearu。Namae hamadaNaI
+と入力します。
+メリット 楽しい 最初はめっっっちゃ打ちにくいですが、慣れると、かなり打ちやすく、特に長文を気持よく打つことができます。
+軽い 形態素解析を行わないからか、動作がかなり軽快です。
+Returnキーを押さない 変換の確定などはReturnキーではなく、別のどのキーでもいいので、結果的にReturnキーを押さなくても大丈夫になります。
+くわしくは ここを見てください。
+AquaSKK プロジェクト::迷っている人へ
+SandS SKKを使うと必然的にShiftキーを沢山押すことになります。 そうなると、小指が過労死します。
+そこで、SKKを使う上でなくてはならない存在のSandS(Shift and Space)です。
+スペースキーをShiftキーとして使用することができる設定です。 じゃあ、スペースキーはどうなるのかというと、スペースキー単体で押したときはスペースキーになり、他のキーと同時押しした時はShiftキーとなります。
+これにより、親指でShiftキーが押せるので、楽にSKKを使うことができます。
+SKK導入 macOS  
+ここからapkをダウンロードしてやる。
+Windows SKK日本語入力FEP 今だ！インストールだ！</description>
+    </item>
+    
+    <item>
+      <title>マウス操作をVimライクにやる</title>
+      <link>https://ryu955.github.io/posts/2018/06/06/115409/</link>
+      <pubDate>Wed, 06 Jun 2018 11:54:09 +0000</pubDate>
+      
+      <guid>https://ryu955.github.io/posts/2018/06/06/115409/</guid>
+      <description>はじめに 昨日HHKB ユーザーミートアップ vol.2 with 東プレに参加してきました。
+HHKB ユーザーミートアップ vol.2 with 東プレ
+その第3部のLTでKarabinerを使ってマウス操作できるのを知ったので、早速使ってみようと思いました。
+できること dを押しながら、hjklを押すとカーソル移動することができて、vnでクリックできる。
+最初カーソルスピードがめっちゃ早くて使いにくいって思ったら、g押すとスピードもおとせてすごい。
+ 設定 インストール Releases · wwwjfy/Karabiner-Elements · GitHub
+dmgをインストールする。
+設定 Add rule
+ Import more rules ~
+ Mouse Keys Mode v4をImport
+ Mouse Keys Mode v4をEnable
+ 終わり</description>
+    </item>
+    
+    <item>
+      <title>Kotlinを始めた</title>
+      <link>https://ryu955.github.io/posts/2018/04/28/173752/</link>
+      <pubDate>Sat, 28 Apr 2018 17:37:52 +0000</pubDate>
+      
+      <guid>https://ryu955.github.io/posts/2018/04/28/173752/</guid>
+      <description>はじめに android開発をしようと思い、せっかくなのでJavaではなくてKotlinでやってみようと思った。
+Kotlin助走読本 Kotlinは名前を知ってるくらいしか知識がなく、何をすればいいかわからなかったので調べたら、日本Kotlinユーザグループが公開してる助走本なるものがあるらしくとりあえず読むことにしました。 kotlin-prior-learning-book.pdf - Google ドライブ
+Kotlinの歴史から始まり、基本的な文法が書かれていて、ところどころJavaとの比較が書いてありました。
+ストップウォッチ 試しにアプリ作ってみたいなと思い、以下のサイトを写経してみた。 正式採用の「Kotlin」で挑戦！ 初めてのAndroidアプリ開発 〜ストップウォッチを作ってみよう〜 - エンジニアHub｜若手Webエンジニアのキャリアを考える！
+UIとスクリプトの紐付けはXcodeのほうが直感的で便利だと思いましたが、Android Studioの補完は強くてJetBrains製はやっぱり良いなと思いました。
+Kotlinスタートブック ストップウォッチアプリを作成した上で、わからないことが多すぎたので Kotlinスタートブック をかいました。 とりあえずやっていこうと思います。</description>
+    </item>
+    
+    <item>
+      <title>Unity初心者用サイトまとめ</title>
+      <link>https://ryu955.github.io/posts/2018/04/06/022647/</link>
+      <pubDate>Fri, 06 Apr 2018 02:26:47 +0000</pubDate>
+      
+      <guid>https://ryu955.github.io/posts/2018/04/06/022647/</guid>
+      <description>はじめに Unity始めたばかりの人たちが研究室に多かったので、参考になりそうなサイトをかき集めて見ました。
+Unityはバージョンアップで色々変わるので、サイトに乗っているバージョンと自分の使うバージョンを確認してください。
+チュートリアル系 Unity - はじめてのUnity 初学者はとりあえずこれやっておけば間違いないと思います。 本当に基礎的なことが詰め込まれた良いチュートリアルだと思います。
+ほかにもUnity公式のチュートリアルはどれも質が高いと思います。 Unity - Learn - Modules
+【Unity2D】Unityで2Dミニゲームを作るチュートリアル（第１回） - Qiita 私がUnityを初めて触ったときに、一番最初にやったチュートリアルがこれでした。 パーティクルやオブジェクトをランダムに動かすといったことをこれで学ぶことができました。
+【Unity入門】60分で作るシューティングゲーム　第１回 - おもちゃラボ 私はこのチュートリアルでprefabについていろいろ学ぶことができました。 このチュートリアル以外にも様々な記事があるので目を通して見ると良いと思います。 おもちゃラボ
+また、このブログを書いているひとはUnityの教科書 Unity 2017完全対応版 2D&amp;amp;3Dスマートフォンゲーム入門講座 (Entertainment&amp;amp;IDEA) | 北村 愛実 |本 | 通販 | Amazonを書いたひとです。私もUnity5時代の本を持っています。 この本はイラストでの解説が多くわかりやすいのでおすすめです。
+Unity入門-openbook openbookにあるチュートリアルです。 ブロック崩しだけ実際にやった記憶があります。 馴染みのあるゲームを自分で作るのは楽しかったです。
+Unity入門 (全26回) - プログラミングならドットインストール 自分はやったことありませんが、動画で実際にやってるところを見ながらのほうがいい人はドットインストールは良いと思います。 ただ、Unityのバージョンが4.2.0なのが…
+情報収集 Unity スクリプトリファレンス Unityの公式リファレンスは結構しっかりしてるのでよく使います。
+テラシュールブログ Unityについて調べ物する際、必ず目にします。 実行時のGIFを載せてくてるし、説明もうまいのでわかりやすいです。 テラシュールブログのありがたみはUnity触り始めてすぐ痛感すると思います。
+Unity(C#)初心者・入門者向けチュートリアル ひよこのたまご テラシュールブログの次によく見ることになると思います。 バックグラウンドが黄色で目がチカチカして見にくい点以外はとても良いです。
+私はやったことがないのですが、チュートリアルもたくさん載っています。 Unity5チュートリアルアプリ一覧 - Unity(C#)初心者・入門者向けチュートリアル ひよこのたまご
+ブログ 【Unity】素人が7日間クソゲーを作り続けてわかったこと | uinyan．com 有名な記事なのでUnityやったことなくても知ってるひとは多いと思います。 この記事と合わせて後日談である【Unity】クソゲーを作って晒したら世界が変わった件 | uinyan．comを読むと、自分もやらないとなって気持ちになれます。</description>
+    </item>
+    
+    <item>
+      <title> LineRendererでGameObjectの周りを線を囲いたい</title>
+      <link>https://ryu955.github.io/posts/2018/03/30/015516/</link>
+      <pubDate>Fri, 30 Mar 2018 01:55:16 +0000</pubDate>
+      
+      <guid>https://ryu955.github.io/posts/2018/03/30/015516/</guid>
+      <description> やりたいこと ① 複数のマーカー(GameObject)の間を線で囲いたい
+ ② マーカーが増えたときも、それに合わせて線で囲ってほしい
+ 環境    名前  バージョン      macOS Sieera 10.12.6    Unity  2017.1.0f3 Personal     線を引く Unityで線を引く方法はいくつかあるが*1、今回はこの中で扱いが楽そうなLineRendererを使うことにした。
+LineRendererは LineRenderer.numPositions 頂点の数を設定し、LineRenderer.SetPosition(int,Vecter3) 描画したい頂点の順番と座標を引数に線を描画することができる。
+動的に線を描画 コードはこんな感じ。
+foreachでリストを回してるだけ。
+ 見た目はこんな感じ(デモ用に markerList の中に3つcubeを入れてある)。
+ 悩んだのは頂点の数を変える際、 LineRenderer.numPositions で設定する頂点の数はconstになると思ってたら、普通に変えることができた。
+markerList にGameObjectを追加しても描画してくれるし、GameObjectの座標を変えても線が追従してくれる様になった。
+
+線を囲う とりあえずマーカー同士を線で結ぶことはできたけど、囲うことはできてない。
+ なので、Inspectorをいじると、
+ いい感じになった。
+ 雑記 ブログを書く前は、LineRendererのinspectorにroopの設定があることを知らずに、線を囲うために下のコードで無理やりやっていた。
+ブログを書くためにLineRendererについて再度調べてるうちに、roopを見つけてこれでいいじゃん…ってなった。
+ *1:2Dの線を描画する【Unity】 - Qiita  </description>
+    </item>
+    
+    <item>
+      <title>透過画像を使ったボタンの範囲から透過されている部分を削除する</title>
+      <link>https://ryu955.github.io/posts/2018/02/20/002207/</link>
+      <pubDate>Tue, 20 Feb 2018 00:22:07 +0000</pubDate>
+      
+      <guid>https://ryu955.github.io/posts/2018/02/20/002207/</guid>
+      <description>問題 Unityのボタンに円形の画像を使った際、ボタンの選択範囲が四角になってしまうため、円形の外にも選択判定ができてしまう問題があった。 単純な円形なら後述するICanvasRaycastFilterを使えばいけるけど、半円やキャラクタの形をしたボタンなどを実装したい場合は厳しそう。
+例えば、下の星の画像でボタンを作り、星の範囲だけに判定をもたせたいのに、  こんな感じに、画像がちょうど入る四角い範囲がボタンになってしまい、ピンク色のところにも判定ができてしまう。
+ 前提  画像の非選択にしたい場所が透過されている  ようは透過画像を使いたい    デモ 処理の説明の前にとりあえずデモ。 左が処理前、右が処理後です。 処理前は星の外をクリックしても反応していますが、処理後は反応しなくなりました。
+
+解決方法 RaycastMask.csをProjectにコピペ  
+ RaycastMask.csをProjectに置く。 また、コピペする際、25,122行目のフラグがあると動かないのでそれを除いたものをする。
+Projectにある使いたい画像の設定を変える  ボタンを作る  おわり
+ちょっと解説 RaycastMask.csのざっくりとした処理  画像の情報を取り、透過されているかを判定する(GetPixcel) 透過されていない範囲にレイキャストを与える(ICanvasRaycastFilter)  GetPixcel とは  座標(x, y)のピクセルのカラーを取得します。Unity - スクリプトリファレンス: Texture2D.GetPixel
+ これで画像の状態を取ることができる。
+ICanvasRaycastFilter とは RaycastMask.cs が継承してるクラス。
+ この要素はレイキャストをフィルタリングすることができます。トップレベルの要素がヒットした場合、その位置が有効であるとさらに &amp;#39;チェック&amp;#39; することができます。 ICanvasRaycastFilter - Unity スクリプトリファレンス
+ これを使うことで、uGUIの選択範囲を広めたり狭めたりできる。 詳しい使い方は以下のサイトをみればわかると思います。
+UnityのuGUIのクリック範囲を広げたり制限したりする方法 - テラシュールブログ
+Read/Write Enabled とは  テクスチャデータをスクリプトからアクセスできるようにします(GetPixels、SetPixels、その他の Texture2D 関数)。注意することとして、作成されたテクスチャデータは、テクスチャアセットとして必要なメモリ量は倍となります。必ず、必要な場合のみ使用してください。これは非圧縮や DXT 圧縮のテクスチャでのみ有効であり、その他の圧縮テクスチャの種類では読みこむことができません。デフォルトでは無効となっています。 テクスチャ - Unity マニュアル</description>
+    </item>
+    
+    <item>
+      <title>最近読んでる本</title>
+      <link>https://ryu955.github.io/posts/2018/01/30/204551/</link>
+      <pubDate>Tue, 30 Jan 2018 20:45:51 +0000</pubDate>
+      
+      <guid>https://ryu955.github.io/posts/2018/01/30/204551/</guid>
+      <description>はじめに 1月に入って1回もブログ書いてないのでとりあえず書きます。 書くことも特にないので最近読んでる本について書きます
+日本人のための日本語文法入門 前回ブログにも書いた本ですね。 読破しました。 読み切った感想は日本語ってめっちゃ難しいんだなってことでした。 この本では英語を例に出して説明することがよくあるので英語の勉強にも多少なったような気がします。 この本を読んで以降、英語の勉強をしてる時、日本語の文法だとこうだったと意識するようになりました。 日本語の学習以外にもこう言った効果があったのは読んでよかったと思います。
+理科系の作文技術  特に語ることのないくらい有名な本ですね。 これは丁度1年くらい前に一度読んでいましたが、論文を書くにあたってまた読んでみました。 1年前は読んでいた時はへーくらいにしか思いませんでしたが、今読むとなるほどな&amp;hellip;ってなりました。
+ベタープログラマ ―優れたプログラマになるための38の考え方とテクニック  いま1/3くらい読み終わりました。 タイトルから推測できるようにいいコードを書くために意識した方がいいことが書いてあります。 38個の短いセクションに分けれれていてよみやすくていいと思います。 ただ、テストコードの話などはやったことがなくイメージができないため、読んでいて結構退屈です。 将来的にまた読めば面白そうです。</description>
+    </item>
+    
+    <item>
+      <title>日本語がわからない</title>
+      <link>https://ryu955.github.io/posts/2017/12/29/234220/</link>
+      <pubDate>Fri, 29 Dec 2017 23:42:20 +0000</pubDate>
+      
+      <guid>https://ryu955.github.io/posts/2017/12/29/234220/</guid>
+      <description>はじめに 卒論の時期ですね。
+卒論とかをかいていると日本語力がないのを痛感します。 エンジニアとして生きていくなら、英語はもちろん必要ですが、そもそも日本語ができないと話にならないので辛い気持ちになります。
+ なんだかんだで研究者にとって国語力大事ですね。もちろん理工系の研究者でも。英語力ですら究極的には国語力。— Jun Rekimoto : 暦本純一 (@rkmt) 2017年12月15日
+ 暦本先生も言っている通り、国語力は大切そうなので、日本語の勉強をちゃんとしないとなと思いました。
+最近読んでる本  日本人のための日本語文法入門
+セールでちょっと安くなってたのでこんな本をかいました。 まだ半分くらいしか読んでませんが色々おもしろいです。
+この本は、授業でやるような国語は日本人のための文法である学校文法ではなく、外国人に教えるような日本語文法の説明があるそうです。
+読んでる感想 読んでて思うのは日本語ってめっちゃ難しい言語なんだなってことです。 母国語でなければ絶対話せない言語だったと思います。
+英語との違いとかを入れて話してくれるので、英語の学習にも役に立ちそうです。 例えば、日本語の自動詞は自然中心の仕様が多いのが特徴で、英語は人間中心であるそうです。
+他にも、日本語だと開けるの自動詞は「窓が開く」、他動詞は「窓を開ける」となりますが、英語だとopenだけで自動詞と他動詞の区別がありません。 こういった、自動詞と他動詞が同一である動詞が少ないのも日本語の特徴らしいです。
+読んでいくに連れて、こんな難しい日本語が読み書きできるなら英語もなんとかなるのではという謎の自信が湧いてきます。</description>
+    </item>
+    
+    <item>
+      <title>UNIXという考え方を読んだ</title>
+      <link>https://ryu955.github.io/posts/2017/12/18/000000/</link>
+      <pubDate>Mon, 18 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://ryu955.github.io/posts/2017/12/18/000000/</guid>
+      <description>はじめに 　今回は「UNIXという考え方」を（半年以上前に）読んだのでその感想をかいていきます。
+ 　UNIXにおける考え方やプログラミングをする上で大切なことはもちろん，研究や普段の生活でも言えるようなこともたくさんかいてあって面白い本でした。
+本の感想 　UNIXの考え方 : 基本的な9つの定理と10このUNIXの文化がかいてあり、それぞれ実例などを踏まえて解説していくって感じでした。
+　その中でも個人的に面白かったところや絶対覚えておこうって思った以下のセクションについて、ざっと簡単にまとめて思ったことをかいていこうかなと思います。
+ スモール・イズ・ビューティフル できるだけ早く試作する 1つのプログラムには1つのことをうまくやらせる 森林を守る 部分的総和は全体よりも大きい 90パーセントの解を目指す  スモール・イズ・ビューティフル 内容  小さいものは、大きいものにはない利点がいくつもある。小さいもの同士なら、簡単に独自の便利な方法で組み合わせることが出来るというのもその一つだからだ。
+ 　目的とそれに対するアプローチを明確にして、細分化して実装すれば、似たような場所には同じプログラムを再利用できるよね。 ほかにも、小さいと再利用できるだけじゃなくて、わかりやすいし保守もしやすい、他のツールと共存しやすいなど様々なメリットがある。
+思ったこと 　最近はプログラムをできるだけいい感じのまとまりを関数にするように意識してプログラムを書くようにしました。
+1つのプログラムには1つのことをうまくやらせる 内容  一つのことに集中することで、プログラムに不要な部分をなくせる。不要な部分があると、実行速度が遅くなり、不必要に複雑になり、融通が効かなくなる。
+ 　一つのことをうまくできるプログラムを複数組み合わせたりカスタマイズすることで、目的に沿った処理を果たせるほうがいいよね。 じゃないと、似たような目的なのに、それぞれに対して全て新しいものを作る「車輪の再発明」をするのは無駄だよね。 さらに、一つの機能に絞ることで、プログラム自体も小さくできるよね。
+思ったこと 　細分化するメリットがこれだなっていうのが分かった気になった。
+できるだけ早く試作する 内容  あらゆるプロジェクトにおいて、試作は重要だ。一般的に試作は設計全体のうちのほんの一部として扱われているが、UNIXにおいての試作は、効率的な設計には欠かせない重要な一部だ。
+ 　仕様書とかをかいてないでとりあえず試作を作ったほうがいいよね。 試作を作ると何がうまくいき、何がうまくいかないかがわかるようになる。 これによって、様々なリスクを減らすことができるよね。
+思ったこと 　キレイなプログラムを書こうと考えてる暇があったら汚いプログラムでいいからとりあえずかいて、そのあとリファクタリングするのを意識するようにした。 あとは、研究でもとりあえずプロトタイプとかをさっさと作ったほうがいいのかなって思った。
+森林を守る 内容  UNIXユーザーは紙のドキュメントを嫌う。全てのテキストファイルをコンピュータに保存して、強力なツールでそれらを操作するのだが、このことには十分な理由がある。
+ 　プログラムを印刷してメモをするひとがいるけど、印刷するとそのプログラムは並び替えも移動も編集もできなくなってしまって無駄だよね。
+思ったこと 　昔、印刷されたプログラムとにらめっこをしてるひとをみてワオっておもったことが、言葉にされてて個人的に感動した。 他にも、メモとかも電子化したほうがメリット多いよねって思う。 りんごペンを買ってからは紙に何かをすることをほとんどしなくなった。</description>
+    </item>
+    
+    <item>
+      <title>ゲームオブジェクトが消えた</title>
+      <link>https://ryu955.github.io/posts/2017/10/23/181926/</link>
+      <pubDate>Mon, 23 Oct 2017 18:19:26 +0000</pubDate>
+      
+      <guid>https://ryu955.github.io/posts/2017/10/23/181926/</guid>
+      <description>起きたこと 前回の記事 のことをして以来どうもUnityの調子がわるい
+Hierarchy に何も表示されなくなった
+一応リストを閉じたりする▶はいるけどそれ以外空白
+さらにGameViewは Display 1 No cameras rendering と表示されている
+解決(?)  最初はすべて吹き飛んだと思ったけど、どうやらGameObjectのNameが空になり、InspectorのSetActiveのチェックボックスが外されていた
+Nameとチェックボックスを入れればとりあえずなおる
+原因 バージョンを変えたりしてたせいでメタファイルがクラッシュでもしたのかな</description>
+    </item>
+    
+    <item>
+      <title>HHKB20周年記念ユーザミートアップに行ってきた</title>
+      <link>https://ryu955.github.io/posts/2017/09/28/121847/</link>
+      <pubDate>Thu, 28 Sep 2017 12:18:47 +0000</pubDate>
+      
+      <guid>https://ryu955.github.io/posts/2017/09/28/121847/</guid>
+      <description>  HHKB20周年記念ユーザミートアップ に行ってきました。
+私がHHKBを使い始めたのは今年の5月くらいからでした。
+それ以前はRealforceを使っていたのですが、研究室にあったHHKBを使っているうちに欲しくなってしまい買い替えました。
+会場の入場時に記念品としてTシャツをいただきました。
+ これともう一つ「馬の鞍」とプリントされたものもありました。
+発表 発表は2部構成になっていて前半は今までの歴史、後半はこれからになっていました。
+どんなことが話されたかは アーカイブ が残っているので見てみると面白いと思います。
+展示 会場の後ろ側には1995年に和田先生がPFUに持ち込んだ紙で作られたHHKBのプロトタイプから最新のBluetoothのものまで、歴代のHHKBが展示されていました。
+ その中には10周年記念で作成された50万円する漆塗りのHHKBがあり、触ってみるとキーのストロークが普通のものよりも重く押しやすかったです。
+社会人になってる30周年でまた再販されたら買ってしまうかもしれないです…
+LTと懇親会 LTはHHKBミートアップという尖ったイベントなだけあった、色々濃くどれもおもしろかったです。
+懇親会で中央の机に参加者の様々なキーボードが置かれ、その中にHHKBにトラックポイントを取り付けた物がありました。
+このキーボードの作成ブログを以前読んでいたので実物をみれて感動しました。
+ 余談 お昼に食べた京都勝牛が美味しかったです。
+ </description>
+    </item>
+    
+    <item>
+      <title>OSC2017 Tokyo/Fallで学生LTしてきた</title>
+      <link>https://ryu955.github.io/posts/2017/09/11/143817/</link>
+      <pubDate>Mon, 11 Sep 2017 14:38:17 +0000</pubDate>
+      
+      <guid>https://ryu955.github.io/posts/2017/09/11/143817/</guid>
+      <description>はじめに 毎年行こう行こう思いつつ行ったことなかったOSCに初参加してきました．
+OSC内であった学生LTにも参加してやってきました．
+LT 夏休みに趣味で作ってたアプリについて発表しました．
+ちなみに、このアプリは以前つくったやつをもとにつくりました。
+swiftよくわからない - // 何もわからない
+対象ユーザが工科大生から、八高線を使っている工科大生へとよりニッチになりました。
+ほぼ私専用ですね。
+発表資料  デモ 発表資料内のデモ動画がPDFだと動かないのでGifにしたもの
+ DEMOその1  DEMOその2 ソース まだ開発途中ですが以下のリポジトリにあります．
+github
+色々回って 個人的に1番感動したのは線型算法同好会さんのプラレールでつくった半加算器です．
+最後のLTの発表も面白かったです．
+  こちらはプラレール半加算器で1+1=2を並列で計算している様子です。 #osc17tk #PlarailLogicCircuit pic.twitter.com/Dl63yy1aSk— 線型算法同好会 (@lin_calc) 2017年9月9日
+ おわりに ステッカーとかもたくさんもらいました．
+ 次回もOSCに行こうと思いますし，機会があればまたLTさせていただきたいと思います．</description>
+    </item>
+    
+    <item>
+      <title>ActionSheetPickerを使って時間を選択する</title>
+      <link>https://ryu955.github.io/posts/2017/09/06/052707/</link>
+      <pubDate>Wed, 06 Sep 2017 05:27:07 +0000</pubDate>
+      
+      <guid>https://ryu955.github.io/posts/2017/09/06/052707/</guid>
+      <description>はじめに  時刻表のアプリとかでよく見る，選択したらActionSheetとPickerが混ざったやようなやつが開いて時間を選べるやつを実装したかった   使ったやつ  ActionSheetPicker-3.0  名前の通りActionSheetとPickerが組み合わさったものが使えるプラグイン
+探し求めてたものがピンポイントでありました
+環境  macOS Sierra 10.12.2 Xcode 8.3.1 Swift3 Carthage 0.25.0  ActionSheetPicker-3.0のインポート ActionSheetPickerはライブラリ管理ツールを用いてインポートします．
+今回はライブラリ管理ツールにCarthageを用いますが，CocoaPodsでもできます．
+Carthageのインポートはreadmeに全て書いてあります．
+Carthage自体の使い方はこの記事が丁寧で分かりやすかったので，ここをみつつInputFile名を $(SRCROOT)/Carthage/Build/iOS/CoreActionSheetPicker.framework に置き換えれば使ったことない人でも問題ないと思います．
+こんな感じ  storyboard まず，Main.storyboardにラベルとボタンを置きます．  その後，スクリプトにそれぞれを紐付けます． ボタンはConnectionをActionにします．
+ ソースコード storyboardに置いたボタンに動作を記述します．
+gist.github.com
+実行結果  解説  9行目の datePickerMode の値を変更するとPickerの選択肢が変わる  UIDatePickerMode.date だと下の図みたいに日付だけとか UIDatePickerMode. でいろいろサジェストされるから用途に合ったものを選択するといいと思います      13行目のフォーマットを書き換えることで任意の表示方法にできる 22行目の数字の値の感覚で分が表示される  github リポジトリ
+cloneした後，ディレクトリ内でCarthageをビルドしないとエラーが出ると思うので ，ターミナルでcloneしたディレクトリの中で carthage update &amp;ndash;platform iOS を実行</description>
+    </item>
+    
+    <item>
+      <title>大学のバスの時刻表をスクレイピングする</title>
+      <link>https://ryu955.github.io/posts/2017/09/04/023913/</link>
+      <pubDate>Mon, 04 Sep 2017 02:39:13 +0000</pubDate>
+      
+      <guid>https://ryu955.github.io/posts/2017/09/04/023913/</guid>
+      <description>はじめに いま趣味で作ってるもので大学のバスの時刻表のデータがほしかったからスクレイピングした
+スクレイピング対象  東京工科大学のバスサイト  どんなデータが欲しいのか  キャンパス発と駅着発とキャンパス着がカンマ区切りになったcsvファイル  扱う側でsplitなりで整形しやすいように   八王子の民なのでみなみ野のデータはなし  環境  macOS Sierra 10.12.2 Python 3.5.2 BeautifulSoupを使った  BeautifulSoupをインストール $ pip install beautifulsoup4  試行錯誤 ソースコード gist.github.com
+出力 出力されたBusTimeTable.csvの上から10行目まで
+gist.github.com
+問題点  複数行に渡ってるけど1行にしたい 備考欄がいらない シャトル運行の時間が ～,～,～,シャトル運行（約3～5分間隔) となっている 4列目に空白文字がありカンマで終わっていない  07:18,07:30,07:48,(空白)    改善したもの ソースコード gist.github.com
+出力 出力を一行にしたので途中まで
+gist.github.com
+変更点 1つ目  16行目に以下を追加  writer = csv.writer(csvFile,lineterminator=&amp;amp;#39;,&amp;amp;#39;)   lineterminatorは各行の終端する際に用いられる文字列で，未宣言時のデフォルトだと\r\nになる lineterminatorにカンマをいれることで改行しないで一行のcsvファイルになる  2つ目  21行目から32行目を以下に変更  for cell in row.</description>
+    </item>
+    
+    <item>
+      <title>golang.tokyo #8 に行ってきた</title>
+      <link>https://ryu955.github.io/posts/2017/09/03/010018/</link>
+      <pubDate>Sun, 03 Sep 2017 01:00:18 +0000</pubDate>
+      
+      <guid>https://ryu955.github.io/posts/2017/09/03/010018/</guid>
+      <description> はじめに  golang.tokyo #8に行ってきました  golang.tokyo #8 - connpass   ちなみにGo自体はA Tour of Goをやって，スクレイピングをやったくらいしか触ったことないです 開催場所のDMM.comの中は森でした  セッション 一人目  一人目の登壇者の星一さんはGoで作成した2Dゲームライブラリebitenについて発表されていました  発表資料 ebitenとは   普段Unityでゲーム開発をしてるから，こういったゲームエンジンがどういう風に作られているかという話が面白かった とりあえず，ebitenのwikiにあったTutorialsをやってみました 何かしらのGoの学習ついでになにかゲームをつくって見ようと思います  二人目  二人目の登壇者はzcheeさんは個人でつくっているGoのプロダクトについて発表されていました  発表資料      個人で作っているgoのプロダクト by zchee編  from Koichi Shiraishi 
+ 自分が不満を持ったことは自分で解決させるというのは大切なことだと思いました  感想  Go自体の知識はほぼない状態でしたが，Goにかぎらず様々なことに通じるセクションだったため面白かったです  </description>
+    </item>
+    
+    <item>
+      <title>xamlで宣言したImageをスクリプトから動かす</title>
+      <link>https://ryu955.github.io/posts/2017/08/25/005509/</link>
+      <pubDate>Fri, 25 Aug 2017 00:55:09 +0000</pubDate>
+      
+      <guid>https://ryu955.github.io/posts/2017/08/25/005509/</guid>
+      <description>はじめに  最近WPFを触ってるけど全く分からない とりあえず機能単位のサンプルソースを自分で作ると理解した気になれた  やりたかったこと  xamlで宣言したの画像の位置をスクリプトから動的に変えたかった  やったこと 3通りの方法をやった  データバインディングを用いて Canvasを用いて DynamicResorceを用いて  結果  1は失敗  最初の読み込み時は想定の場所に行くけど、以降動かない   2は最低限のことはできたけど、Canvasのレイヤーの上でやる影響で色々厄介 3がいい感じだった  どんなコードかいたのか  画像をスクリプトで宣言した場所に動かすソースコード達  1はMainWindow()で行ってるけど，2と3は関数をつくった    データバインディングを用いて &amp;amp;lt;Grid&amp;gt; &amp;amp;lt;Label x:Name=&amp;quot;target&amp;quot; Content=&amp;quot;動くよ&amp;quot; Margin=&amp;quot;{Binding position}&amp;quot; VerticalAlignment=&amp;quot;Top&amp;quot; RenderTransformOrigin=&amp;quot;0.349,-0.072&amp;quot; Height=&amp;quot;50&amp;quot; Width=&amp;quot;50&amp;quot;/&amp;gt; &amp;amp;lt;/Grid&amp;gt;  public MainWindow(){ InitializeComponent(); // Thicknessは構造体だからこんな感じでいれる // 引数はフィールドに宣言か，直でいれるとその場所に表示される Thickness margin = new Thickness(left, top, right, bottom); this.DataContext = new { position = margin}; }   そもそもデータバインディングをざっくりいうとxaml内の{Binding 変数名}に，スクリプトのプロパティの値をいれる見たいなものだと思う  詳しくはここ - ＠IT](http://www.</description>
+    </item>
+    
+    <item>
+      <title>VR Tech Tokyo#6に行ってきた</title>
+      <link>https://ryu955.github.io/posts/2017/03/22/173015/</link>
+      <pubDate>Wed, 22 Mar 2017 17:30:15 +0000</pubDate>
+      
+      <guid>https://ryu955.github.io/posts/2017/03/22/173015/</guid>
+      <description>（終了しました）VR Tech Tokyo #6 @ Microsoft - connpass
+connpassで面白そうな勉強会ないか探してたら面白そうなイベントを見つけたので行ってきた
+VR，AR，MRに興味合ったし，バイトでARに関係する開発やってるから惹かれた．
+Windows Mixed Realityについての発表だったり，VRゲームのゲームデザインについての発表だったりと様々な内容があって面白かった．
+個人的に一番すごいなって思ったのがVoxelKeiさんの「日本列島VRとHoleLenz」の中にあったHoleLenz Gateだった．
+ヒェッ…HoloLensアプリ「HoleLenz Gate」が高所恐怖症をかき立てる｜ギズモード・ジャパン
+もともとSFとかが好きなので近未来感があって面白いなって思った．
+発表も面白かったけど体験会で，VR音ゲーのAIR TONEを体験したりホロレンズを初めて触ったりと楽しかった．
+#7も行けたら行きたい</description>
+    </item>
+    
+    <item>
+      <title>【Unity】ボタンの画像を動的に変える</title>
+      <link>https://ryu955.github.io/posts/2017/03/01/214410/</link>
+      <pubDate>Wed, 01 Mar 2017 21:44:10 +0000</pubDate>
+      
+      <guid>https://ryu955.github.io/posts/2017/03/01/214410/</guid>
+      <description>やりたかったこと  uGUIのボタンの画像をスクリプトから動的に変えたかった。 ゲームオブジェクトは複数にしたくなかった。  ゲームオブジェクトを複数用意してSetActive()で出す方法も考えたがそれをやると内部を大分いじる必要が出る為没 - というか、力技すぎてソースがめっちゃ汚くなる    模索 SpriteRenderer  最初にSpriteRendererを用いる方法を思いついた。  using UnityEngine; using System.Collections; public class changeImage : MonoBehaviour { // 画像を動的に変えたいボタンの宣言 SpriteRenderer btnSpriteRenderer; // inspectorで直接画像のスプライトを張り付ける public Sprite Asprite; public Sprite Bsprite; public Sprite Csprite; void Start(){ // SpriteRendererを所得する btnSpriteRenderer = this.GetComponent&amp;amp;lt;SpriteRenderer&amp;gt;(); } void Update(){ // フラグによってそれに合った画像に差し替える if (flg == &amp;quot;a&amp;quot;){ btnSpriteRenderer.sprite = Asprite; }else if(flg == &amp;quot;b&amp;quot;){ btnSpriteRenderer.sprite = Bsprite; }else if(flg == &amp;quot;c&amp;quot;){ btnSpriteRenderer.</description>
+    </item>
+    
+    <item>
+      <title>【Unity】androidでビルドできなかった話</title>
+      <link>https://ryu955.github.io/posts/2017/02/17/010631/</link>
+      <pubDate>Fri, 17 Feb 2017 01:06:31 +0000</pubDate>
+      
+      <guid>https://ryu955.github.io/posts/2017/02/17/010631/</guid>
+      <description> 問題 Unityで作ったやつをiOSでビルドして正しい動きができるの確認できたから，androidでも確認しようとしたらこんなこと言われてビルドが出来なかった． Unable to install APK! Installation failed.See the Console for details.  原因 ビルド端末にビルドしようとしたプロジェクトと同じBundle Identifierのアプリが合ったため． 私が詰まった理由は，ビルド端末にビルドしようとしたプロジェクトと同じアプリケーションはなかったものの，名前は違うがBundle Identifierがビルドしようとしたプロジェクトと同じものが合ったせいで原因を見つけるのに時間がかかった．
+解決方法 解決方法は2つ考えられると思う  ビルド端末に内にある，現在ビルドしようとしているプロジェクトに設定されているBundle Identifierと同じアプリを消す Bundle Identifierを変える  多分1が無難
+Bundle Identifierの確認方法 Build SettingのPlayer Settingsを押す Inspector内のOther Settingsの下の方にBundle Identifierがある </description>
+    </item>
+    
+    <item>
+      <title>人生</title>
+      <link>https://ryu955.github.io/posts/2016/07/23/150348/</link>
+      <pubDate>Sat, 23 Jul 2016 15:03:48 +0000</pubDate>
+      
+      <guid>https://ryu955.github.io/posts/2016/07/23/150348/</guid>
+      <description>  </description>
+    </item>
+    
+    <item>
+      <title>パイ作り</title>
+      <link>https://ryu955.github.io/posts/2016/07/20/030814/</link>
+      <pubDate>Wed, 20 Jul 2016 03:08:14 +0000</pubDate>
+      
+      <guid>https://ryu955.github.io/posts/2016/07/20/030814/</guid>
+      <description>正月あたりに買って家で眠ってたラズパイをようやく開封して遊んでました．
+ raspbianがうまく入らな打て3回くらい入れなおしてようやく付きました   日本語化しようとしたら文字化けしたので諦めたの図  SSHで繋がらないって3時間くらい頭を抱えてたらLAN指してるところがネットにつながってなかったという理由で切れながらも初期設定は終わりました．
+この後何に使うか全く考えてないのでとりあえず思い浮かぶまで放置します．</description>
+    </item>
+    
+    <item>
+      <title>swiftよくわからない</title>
+      <link>https://ryu955.github.io/posts/2016/07/15/191123/</link>
+      <pubDate>Fri, 15 Jul 2016 19:11:23 +0000</pubDate>
+      
+      <guid>https://ryu955.github.io/posts/2016/07/15/191123/</guid>
+      <description>Swiftなにもわからなかったです． 完成させて先生に売り込みに行きたいです．</description>
+    </item>
+    
+    <item>
+      <title>人生</title>
+      <link>https://ryu955.github.io/posts/2016/07/12/111359/</link>
+      <pubDate>Tue, 12 Jul 2016 11:13:59 +0000</pubDate>
+      
+      <guid>https://ryu955.github.io/posts/2016/07/12/111359/</guid>
+      <description> 辛い  </description>
+    </item>
+    
+    <item>
+      <title>WiiU買いました</title>
+      <link>https://ryu955.github.io/posts/2016/06/16/221215/</link>
+      <pubDate>Thu, 16 Jun 2016 22:12:15 +0000</pubDate>
+      
+      <guid>https://ryu955.github.io/posts/2016/06/16/221215/</guid>
+      <description>時代の波に乗り遅れた感がすごいですけど買いました．
+なんで今さら フェスの開催が告げられた。
+お題は「あなたはどっち派？ きのこの山 vs たけのこの里」。
+株式会社 明治様のご協力でお届けする。
+期間は6月18日（土）9:00～6月19日（日）9:00。
+この戦いに、キミの手で決着をつけよう。 pic.twitter.com/s6L9nsuFUR
+&amp;mdash; Splatoon（スプラトゥーン） (@SplatoonJP) June 10, 2016  戦争に参加してたけのこ派を消すためです．
+開封の儀  コントローラーは中古で買ったにもかかわらず結構綺麗でした
+ 本体は結構傷があって落ち込みました．
+   スプラトゥーンです．最近説明書が電子化したのは悲しい限りです．
+おわり 暇そうだったらプラベ誘ってくれたりすると嬉しいです．</description>
+    </item>
+    
+    <item>
       <title>About</title>
       <link>https://ryu955.github.io/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
